@@ -1,0 +1,21 @@
+# --- .NET / Visual Studio (pour les phases de développement à venir) ---
+bin/
+obj/
+.vs/
+*.user
+*.suo
+TestResults/
+artifacts/
+publish/
+appsettings.*.local.json
+*.pfx
+
+# --- Fichiers internes non versionnés ---
+Documents/
+AGENTS.md
+
+# --- Divers ---
+Thumbs.db
+Desktop.ini
+*.log
+extraction_pdf.txt
