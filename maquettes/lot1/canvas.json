@@ -7,7 +7,7 @@
     { "file": "Validation.dc.html", "x": 0, "y": 2080, "w": 1440, "h": 900 }
   ],
   "annotations": [
-    { "id": "lot1-note", "x": 0, "y": -170, "w": 420, "text": "GESTINDEM — Lot 1 (identité visuelle + 4 écrans clés)\nDonnées fictives de démonstration. Les barèmes réels seront paramétrés dans l'application.\nÀ valider avant le Lot 2 : personnel, structures, barèmes, missions, états, statistiques, administration." }
+    { "id": "lot1-note", "x": 0, "y": -170, "w": 420, "text": "GESTINDEM — Lot 1 VALIDÉ (identité + 4 écrans clés)\nDonnées fictives de démonstration ; barèmes réels paramétrés dans l'application.\nAdopté après audit frontend-design : fond froid teal, signature khatam, chiffres tabulaires, KPI hiérarchisés, titres IBM Plex Serif + wordmark bicolore.\nProchaine étape : Lot 2 (personnel, structures, barèmes, missions, états, statistiques, administration)." }
   ],
   "launch": { "view": "canvas" }
 }

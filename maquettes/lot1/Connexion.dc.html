@@ -7,15 +7,15 @@
 <body>
 <x-dc>
 <helmet>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #182420; }
+    body { margin: 0; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #182420; font-variant-numeric: tabular-nums; }
     a { color: #10554A; text-decoration: none; }
     a:hover { color: #0B2E29; text-decoration: underline; }
     input::placeholder { color: #8A968F; }
   </style>
 </helmet>
-<div style="width: 1440px; height: 900px; display: flex; background: #F4F3EF; overflow: hidden;">
+<div style="width: 1440px; height: 900px; display: flex; background: #ECF1EE; overflow: hidden;">
 
   <!-- Panneau institutionnel -->
   <div style="width: 760px; height: 900px; background: #0B2E29; position: relative; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box; padding: 56px 64px;">
@@ -45,7 +45,7 @@
         <path d="M36 28 V44 M28 36 H44" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"></path>
       </svg>
       <div style="display: flex; flex-direction: column; gap: 12px;">
-        <div style="font-size: 44px; font-weight: 700; color: #FFFFFF; letter-spacing: -0.5px; line-height: 1.1;">GESTINDEM</div>
+        <div style="font-family: 'IBM Plex Serif', Georgia, serif; font-size: 44px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.5px; line-height: 1.1;">GESTIN<span style="color: #B98A2F;">DEM</span></div>
         <div style="font-size: 17px; color: #C9D8D1; line-height: 1.55; max-width: 480px;">Gestion des indemnités de garde, d'astreinte, de permanence et de déplacement des professionnels de santé.</div>
       </div>
     </div>
@@ -60,18 +60,18 @@
   <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
     <div style="width: 400px; display: flex; flex-direction: column; gap: 28px;">
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div style="font-size: 26px; font-weight: 600; color: #182420;">Connexion</div>
+        <div style="font-family: 'IBM Plex Serif', Georgia, serif; font-size: 27px; font-weight: 600; color: #182420;">Connexion</div>
         <div style="font-size: 14px; color: #61706A;">Accédez à votre espace de gestion des indemnités.</div>
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 18px;">
         <div style="display: flex; flex-direction: column; gap: 7px;">
           <label style="font-size: 13px; font-weight: 600; color: #3A4741;">Identifiant</label>
-          <input type="text" placeholder="ex. n.elfassi" style="height: 46px; border: 1px solid #D6D4CA; border-radius: 8px; padding: 0 14px; font-size: 14px; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; background: #FFFFFF; color: #182420; outline: none; box-sizing: border-box;">
+          <input type="text" placeholder="ex. n.elfassi" style="height: 46px; border: 1px solid #C9D3CD; border-radius: 8px; padding: 0 14px; font-size: 14px; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; background: #FFFFFF; color: #182420; outline: none; box-sizing: border-box;">
         </div>
         <div style="display: flex; flex-direction: column; gap: 7px;">
           <label style="font-size: 13px; font-weight: 600; color: #3A4741;">Mot de passe</label>
-          <div style="height: 46px; border: 1px solid #D6D4CA; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; padding: 0 14px; box-sizing: border-box; justify-content: space-between;">
+          <div style="height: 46px; border: 1px solid #C9D3CD; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; padding: 0 14px; box-sizing: border-box; justify-content: space-between;">
             <span style="font-size: 18px; letter-spacing: 3px; color: #182420; line-height: 1;">••••••••••</span>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 9 C3.2 5.6 6 3.8 9 3.8 C12 3.8 14.8 5.6 16.5 9 C14.8 12.4 12 14.2 9 14.2 C6 14.2 3.2 12.4 1.5 9 Z" stroke="#8A968F" stroke-width="1.4"></path><circle cx="9" cy="9" r="2.4" stroke="#8A968F" stroke-width="1.4"></circle></svg>
           </div>
