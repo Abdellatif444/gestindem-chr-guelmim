@@ -4,14 +4,10 @@
     { "file": "Connexion.dc.html", "x": 1320, "y": 0, "w": 1440, "h": 900 },
     { "file": "Main.dc.html", "x": 0, "y": 1040, "w": 1440, "h": 900 },
     { "file": "Planning.dc.html", "x": 1560, "y": 1040, "w": 1440, "h": 900 },
-    { "file": "Validation.dc.html", "x": 0, "y": 2080, "w": 1440, "h": 900 },
-    { "file": "VarianteKPI.dc.html", "title": "Variante 2 — KPI hiérarchisés", "x": 1560, "y": 2080, "w": 1440, "h": 900 },
-    { "file": "VarianteTypo.dc.html", "title": "Variante 4 — Typo serif", "x": 0, "y": 3220, "w": 1440, "h": 900 }
+    { "file": "Validation.dc.html", "x": 0, "y": 2080, "w": 1440, "h": 900 }
   ],
   "annotations": [
-    { "id": "lot1-note", "x": 0, "y": -170, "w": 420, "text": "GESTINDEM — Lot 1 (identité visuelle + 4 écrans clés)\nDonnées fictives de démonstration. Les barèmes réels seront paramétrés dans l'application.\nCorrections audit frontend-design appliquées : fond froid dérivé du teal, signature khatam, chiffres tabulaires, espaces insécables." },
-    { "id": "note-var2", "x": 3060, "y": 2080, "w": 300, "text": "Variante 2 — KPI hiérarchisés (à valider ou rejeter)\n+ : la dépense du mois domine avec sa tendance 6 mois — lecture directeur en 1 seconde.\n− : les 3 indicateurs secondaires perdent en visibilité immédiate." },
-    { "id": "note-var4", "x": 1500, "y": 3220, "w": 300, "text": "Variante 4 — Typo serif (à valider ou rejeter)\n+ : titres en IBM Plex Serif + wordmark bicolore GESTIN·DEM = personnalité institutionnelle affirmée.\n− : une 2e famille de police à transposer en WPF (repli Georgia/Cambria)." }
+    { "id": "lot1-note", "x": 0, "y": -170, "w": 420, "text": "GESTINDEM — Lot 1 VALIDÉ (identité + 4 écrans clés)\nDonnées fictives de démonstration ; barèmes réels paramétrés dans l'application.\nAdopté après audit frontend-design : fond froid teal, signature khatam, chiffres tabulaires, KPI hiérarchisés, titres IBM Plex Serif + wordmark bicolore.\nProchaine étape : Lot 2 (personnel, structures, barèmes, missions, états, statistiques, administration)." }
   ],
   "launch": { "view": "canvas" }
 }
