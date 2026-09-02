@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #182420; font-variant-numeric: tabular-nums; }
+    a { color: #10554A; text-decoration: none; }
+    a:hover { color: #0B2E29; text-decoration: underline; }
+  </style>
+</helmet>
+<div style="width: 1440px; height: 900px; display: flex; background: #ECF1EE; overflow: hidden;">
+
+  <!-- ===== Barre latérale ===== -->
+  <div style="width: 236px; height: 900px; background: #0B2E29; display: flex; flex-direction: column; box-sizing: border-box; padding: 20px 14px; flex-shrink: 0;">
+    <div style="display: flex; align-items: center; gap: 11px; padding: 4px 8px 18px 8px;">
+      <svg width="34" height="34" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <rect x="16" y="16" width="40" height="40" stroke="#B98A2F" stroke-width="3"></rect>
+        <rect x="16" y="16" width="40" height="40" stroke="#B98A2F" stroke-width="3" transform="rotate(45 36 36)"></rect>
+        <path d="M36 28 V44 M28 36 H44" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"></path>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 1px;">
+        <span style="font-family: 'IBM Plex Serif', Georgia, serif; font-size: 15.5px; font-weight: 700; letter-spacing: 0.8px; color: #FFFFFF;">GESTIN<span style="color: #B98A2F;">DEM</span></span>
+        <span style="font-size: 11px; color: #7E968D;">CHR Guelmim</span>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1;">
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 8px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>OPÉRATIONS</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect><rect x="10" y="2" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect><rect x="2" y="10" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect><rect x="10" y="10" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Tableau de bord</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="14" height="13" rx="1.5" stroke="#B9CCC5" stroke-width="1.5"></rect><path d="M2 7 H16 M6 1.5 V4.5 M12 1.5 V4.5" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Plannings</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7" stroke="#B9CCC5" stroke-width="1.5"></circle><path d="M9 5.5 V9 L11.5 11" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Indemnités</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 2 L15 5.5 V12.5 L9 16 L3 12.5 V5.5 Z" stroke="#B9CCC5" stroke-width="1.5" stroke-linejoin="round"></path><path d="M9 9 L15 5.5 M9 9 V16 M9 9 L3 5.5" stroke="#B9CCC5" stroke-width="1.2"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Missions</span>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: 7px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7" stroke="#B9CCC5" stroke-width="1.5"></circle><path d="M6 9.2 L8.2 11.4 L12.2 7" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span style="font-size: 13.5px; color: #B9CCC5;">Validation</span>
+        </div>
+        <span style="min-width: 18px; height: 18px; border-radius: 9px; background: #B98A2F; color: #0B2E29; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; padding: 0 5px; box-sizing: border-box;">12</span>
+      </div>
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 14px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>RESTITUTION</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 2 H11 L15 6 V16 H4 Z" stroke="#B9CCC5" stroke-width="1.5" stroke-linejoin="round"></path><path d="M7 9 H12 M7 12 H12" stroke="#B9CCC5" stroke-width="1.4" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">États &amp; rapports</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 15 V9 M9 15 V4 M15 15 V7" stroke="#B9CCC5" stroke-width="1.8" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Statistiques</span>
+      </div>
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 14px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>RÉFÉRENTIELS</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6.5" cy="6" r="2.8" stroke="#B9CCC5" stroke-width="1.5"></circle><circle cx="12.5" cy="7" r="2.2" stroke="#B9CCC5" stroke-width="1.5"></circle><path d="M2 15 C2 12 4 10.5 6.5 10.5 C9 10.5 11 12 11 15 M12.5 11 C14.8 11 16 12.5 16 14.5" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Personnel</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 16 V5 L9 2 L15 5 V16 M3 16 H15 M7 16 V12 H11 V16" stroke="#B9CCC5" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Structures</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5 H15 M3 9 H15 M3 13 H15" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path><circle cx="6.5" cy="5" r="1.6" fill="#0B2E29" stroke="#B9CCC5" stroke-width="1.4"></circle><circle cx="11.5" cy="9" r="1.6" fill="#0B2E29" stroke="#B9CCC5" stroke-width="1.4"></circle><circle cx="8" cy="13" r="1.6" fill="#0B2E29" stroke="#B9CCC5" stroke-width="1.4"></circle></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Barèmes</span>
+      </div>
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 14px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>SYSTÈME</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; background: rgba(255,255,255,0.11);">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1.5 L15 4 V8.5 C15 12 12.6 14.8 9 16.5 C5.4 14.8 3 12 3 8.5 V4 Z" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        <span style="font-size: 13.5px; font-weight: 600; color: #FFFFFF;">Administration</span>
+      </div>
+    </div>
+
+    <div style="padding: 10px 10px 0; border-top: 1px solid rgba(255,255,255,0.09); font-size: 11.5px; color: #8BA39A;">v1.0 · Dernière sauvegarde 02:00</div>
+  </div>
+
+  <!-- ===== Zone principale ===== -->
+  <div style="flex-grow: 1; display: flex; flex-direction: column; min-width: 0;">
+
+    <!-- Barre supérieure -->
+    <div style="height: 60px; background: #FFFFFF; border-bottom: 1px solid #DBE3DE; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; flex-shrink: 0;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 8px; border: 1px solid #DBE3DE; border-radius: 8px; padding: 7px 12px; background: #F6F9F7;">
+          <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 16 V5 L9 2 L15 5 V16 M3 16 H15" stroke="#61706A" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+          <span style="font-size: 13px; font-weight: 500; color: #182420;">CHR de Guelmim</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; border: 1px solid #DBE3DE; border-radius: 8px; padding: 7px 12px; background: #F6F9F7;">
+          <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="14" height="13" rx="1.5" stroke="#61706A" stroke-width="1.5"></rect><path d="M2 7 H16 M6 1.5 V4.5 M12 1.5 V4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          <span style="font-size: 13px; font-weight: 500; color: #182420;">Août 2026</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 8px; border: 1px solid #DBE3DE; border-radius: 8px; padding: 7px 12px; width: 240px; box-sizing: border-box;">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="4.5" stroke="#66746D" stroke-width="1.5"></circle><path d="M10.5 10.5 L14 14" stroke="#66746D" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          <span style="font-size: 13px; color: #66746D;">Rechercher un utilisateur…</span>
+        </div>
+        <div style="position: relative;">
+          <svg width="19" height="19" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2.5 C7 2.5 5.2 4.8 5.2 7.5 V10.5 L3.5 13.5 H16.5 L14.8 10.5 V7.5 C14.8 4.8 13 2.5 10 2.5 Z" stroke="#61706A" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8.5 16 C8.8 16.9 9.3 17.3 10 17.3 C10.7 17.3 11.2 16.9 11.5 16" stroke="#61706A" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          <span style="position: absolute; top: -7px; right: -9px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: #B3261E; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 1.5px solid #FFFFFF; box-sizing: border-box;">3</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; padding-left: 16px; border-left: 1px solid #DBE3DE;">
+          <div style="width: 34px; height: 34px; border-radius: 17px; background: #DCEBE6; color: #10554A; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center;">HB</div>
+          <div style="display: flex; flex-direction: column; gap: 1px;">
+            <span style="font-size: 13px; font-weight: 600; color: #182420;">H. Bouzid</span>
+            <span style="font-size: 12px; color: #61706A;">Administrateur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenu -->
+    <div style="flex-grow: 1; padding: 18px 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box; overflow: hidden;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-family: 'IBM Plex Serif', Georgia, serif; font-size: 23px; font-weight: 700; color: #182420;">Administration</div>
+          <div style="font-size: 13px; color: #61706A;">Utilisateurs et droits par module et par structure, journal d'audit, sauvegardes et sécurité</div>
+        </div>
+        <div style="display: flex; gap: 10px;"><button style="height: 38px; padding: 0 16px; background: #FFFFFF; border: 1px solid #C9D3CD; border-radius: 8px; font-size: 13px; font-weight: 600; color: #182420; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; display: flex; align-items: center; gap: 8px; cursor: pointer;">Ouvrir le journal complet</button><button style="height: 38px; padding: 0 16px; background: #10554A; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; color: #FFFFFF; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; display: flex; align-items: center; gap: 8px; cursor: pointer;"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3 V13 M3 8 H13" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"></path></svg>Nouvel utilisateur</button></div>
+      </div>
+
+      <div style="display: flex; gap: 16px; flex-grow: 1; min-height: 0;">
+        <div style="width: 780px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; flex-shrink: 0;">
+          <div style="display: flex; align-items: center; justify-content: space-between;"><span style="font-size: 14.5px; font-weight: 600; color: #182420;">Utilisateurs et droits d'accès</span><div style="display: flex; gap: 8px;"><div style="display: flex; align-items: center; gap: 7px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 8px; padding: 8px 12px;"><span style="font-size: 12px; color: #66746D;">Profil</span><span style="font-size: 13px; font-weight: 500; color: #182420;">Tous</span><svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div style="display: flex; align-items: center; gap: 7px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 8px; padding: 8px 12px;"><span style="font-size: 12px; color: #66746D;">Structure</span><span style="font-size: 13px; font-weight: 500; color: #182420;">Toutes</span><svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div>
+          <div style="display: flex; flex-direction: column;"><div style="display: grid; grid-template-columns: 150px 105px 135px 1fr 85px 75px; gap: 8px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #66746D; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;"><span>Utilisateur</span><span>Profil</span><span>Structure</span><span>Modules autorisés</span><span>Dernière conn.</span><span>Statut</span></div><div style="display: grid; grid-template-columns: 150px 105px 135px 1fr 85px 75px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; background: #EDF4F1; box-shadow: inset 0 0 0 1.5px #10554A; border-radius: 8px;"><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 28px; height: 28px; border-radius: 14px; background: #DCEBE6; color: #10554A; font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">NE</span><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">N. El Fassi</span><span style="font-size: 11.5px; color: #66746D;">n.elfassi</span></span></span><span style="color: #3A4741;">Validateur</span><span style="color: #3A4741;">CHR de Guelmim</span><span style="color: #3A4741;">Validation · Plannings · États</span><span style="color: #3A4741;">02/09 08:41</span><span><span style="background: #E4F2E9; color: #17663F; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Actif</span></span></div><div style="display: grid; grid-template-columns: 150px 105px 135px 1fr 85px 75px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;"><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 28px; height: 28px; border-radius: 14px; background: #DCEBE6; color: #10554A; font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">AT</span><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">A. Tazi</span><span style="font-size: 11.5px; color: #66746D;">a.tazi</span></span></span><span style="color: #3A4741;">Agent de saisie</span><span style="color: #3A4741;">CHR — Urgences</span><span style="color: #3A4741;">Plannings · Missions</span><span style="color: #3A4741;">02/09 09:40</span><span><span style="background: #E4F2E9; color: #17663F; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Actif</span></span></div><div style="display: grid; grid-template-columns: 150px 105px 135px 1fr 85px 75px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;"><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 28px; height: 28px; border-radius: 14px; background: #DCEBE6; color: #10554A; font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">SM</span><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">S. Mansouri</span><span style="font-size: 11.5px; color: #66746D;">s.mansouri</span></span></span><span style="color: #3A4741;">Validateur</span><span style="color: #3A4741;">CHR de Guelmim</span><span style="color: #3A4741;">Validation · Plannings</span><span style="color: #3A4741;">01/09 16:12</span><span><span style="background: #E4F2E9; color: #17663F; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Actif</span></span></div><div style="display: grid; grid-template-columns: 150px 105px 135px 1fr 85px 75px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;"><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 28px; height: 28px; border-radius: 14px; background: #DCEBE6; color: #10554A; font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">HB</span><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">H. Bouzid</span><span style="font-size: 11.5px; color: #66746D;">h.bouzid</span></span></span><span style="color: #3A4741;">Administrateur</span><span style="color: #3A4741;">Toutes</span><span style="color: #3A4741;">Tous les modules</span><span style="color: #3A4741;">02/09 09:55</span><span><span style="background: #E4F2E9; color: #17663F; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Actif</span></span></div><div style="display: grid; grid-template-columns: 150px 105px 135px 1fr 85px 75px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;"><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 28px; height: 28px; border-radius: 14px; background: #DCEBE6; color: #10554A; font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">MR</span><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">M. Raji</span><span style="font-size: 11.5px; color: #66746D;">m.raji</span></span></span><span style="color: #3A4741;">Consultation</span><span style="color: #3A4741;">Direction régionale</span><span style="color: #3A4741;">États · Statistiques</span><span style="color: #3A4741;">28/08 11:03</span><span><span style="background: #E4F2E9; color: #17663F; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Actif</span></span></div><div style="display: grid; grid-template-columns: 150px 105px 135px 1fr 85px 75px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; "><span style="display: flex; align-items: center; gap: 8px;"><span style="width: 28px; height: 28px; border-radius: 14px; background: #DCEBE6; color: #10554A; font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">KA</span><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">K. Ait Lahcen</span><span style="font-size: 11.5px; color: #66746D;">k.aitlahcen</span></span></span><span style="color: #3A4741;">Agent de saisie</span><span style="color: #3A4741;">Délégation de Tan-Tan</span><span style="color: #3A4741;">Plannings</span><span style="color: #3A4741;">14/06 08:20</span><span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Désactivé</span></span></div></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; background: #EDF4F1; border: 1px solid #DCEBE6; border-radius: 8px; padding: 10px 14px;"><div style="display: flex; align-items: center; gap: 10px;"><svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;"><circle cx="9" cy="9" r="7" stroke="#3A5C52" stroke-width="1.5"></circle><path d="M9 8 V12.5 M9 5.5 V5.7" stroke="#3A5C52" stroke-width="1.6" stroke-linecap="round"></path></svg><span style="font-size: 13px; color: #3A5C52; line-height: 1.45;">Quatre profils : <strong>administrateur</strong>, <strong>agent de saisie</strong>, <strong>validateur</strong>, <strong>consultation</strong>. Les droits se règlent par module et par structure sur la fiche de chaque utilisateur.</span></div></div>
+          <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #E9EEEA;"><span style="font-size: 12px; color: #66746D;">6 utilisateurs affichés sur 23 · déconnexion automatique après 15 min d'inactivité</span><div style="display: flex; align-items: center; gap: 6px;"><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3 L4.5 6 L7.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size: 12.5px; font-weight: 600; color: #182420; padding: 0 4px;">Page 1 sur 4</span><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 3 L7.5 6 L4.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></div>
+        </div>
+
+        <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 16px; min-width: 0;">
+          <div style="background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;"><span style="font-size: 14.5px; font-weight: 600; color: #182420;">Sauvegardes</span><span style="background: #E4F2E9; color: #17663F; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Quotidienne · 02:00</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12.5px; color: #61706A;">Dernière sauvegarde</span><span style="font-size: 13px; font-weight: 600; color: #182420; text-align: right;">02/09/2026 à 02:00 · 412 Mo</span></div><div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12.5px; color: #61706A;">Chiffrement</span><span style="font-size: 13px; font-weight: 600; color: #182420; text-align: right;">AES-256 · clé gérée par la DSI</span></div><div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12.5px; color: #61706A;">Dernière restauration testée</span><span style="font-size: 13px; font-weight: 600; color: #182420; text-align: right;">25/08/2026 — réussie en 4 min</span></div><div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12.5px; color: #61706A;">Points de restauration</span><span style="font-size: 13px; font-weight: 600; color: #182420; text-align: right;">30 jours glissants · 30 points</span></div>
+            <div style="display: flex; gap: 10px; padding-top: 4px;"><button style="height: 38px; padding: 0 16px; background: #FFFFFF; border: 1px solid #C9D3CD; border-radius: 8px; font-size: 13px; font-weight: 600; color: #182420; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; display: flex; align-items: center; gap: 8px; cursor: pointer;">Restaurer…</button><button style="height: 38px; padding: 0 16px; background: #10554A; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; color: #FFFFFF; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; display: flex; align-items: center; gap: 8px; cursor: pointer;">Sauvegarder maintenant</button></div>
+          </div>
+          <div style="flex-grow: 1; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; min-height: 0;">
+            <div style="display: flex; align-items: center; justify-content: space-between;"><span style="font-size: 14.5px; font-weight: 600; color: #182420;">Journal d'audit — aujourd'hui</span><a href="#" style="font-size: 12.5px; font-weight: 600;">Tout le journal</a></div>
+            <div style="display: flex; flex-direction: column;"><div style="display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12px; color: #66746D; width: 68px; flex-shrink: 0;">09:40</span><span style="font-size: 12.5px; color: #3A4741; line-height: 1.4; flex-grow: 1;"><strong>A. Tazi</strong> a supprimé la garde du 12/08 (Dr Y. Benali) — motif : doublon</span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Planning</span></div><div style="display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12px; color: #66746D; width: 68px; flex-shrink: 0;">09:12</span><span style="font-size: 12.5px; color: #3A4741; line-height: 1.4; flex-grow: 1;"><strong>N. El Fassi</strong> a validé le lot LOT-2026-0145 — 11 900 DH</span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Validation</span></div><div style="display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12px; color: #66746D; width: 68px; flex-shrink: 0;">08:41</span><span style="font-size: 12.5px; color: #3A4741; line-height: 1.4; flex-grow: 1;"><strong>N. El Fassi</strong> connexion réussie</span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Session</span></div><div style="display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12px; color: #66746D; width: 68px; flex-shrink: 0;">02:00</span><span style="font-size: 12.5px; color: #3A4741; line-height: 1.4; flex-grow: 1;"><strong>Système</strong> sauvegarde automatique — 412 Mo, chiffrée</span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Sauvegarde</span></div><div style="display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12px; color: #66746D; width: 68px; flex-shrink: 0;">hier 16:40</span><span style="font-size: 12.5px; color: #3A4741; line-height: 1.4; flex-grow: 1;"><strong>H. Bouzid</strong> a créé la version 3 du barème « Garde — Médecins »</span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Barèmes</span></div></div>
+            <span style="margin-top: auto; font-size: 12px; color: #66746D;">Chaque action est horodatée, attribuée et conservée 5 ans. Le journal n'est pas modifiable.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

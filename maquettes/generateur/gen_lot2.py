@@ -527,9 +527,14 @@ SCREENS = [
     ("Missions.dc.html", "Missions", MISSIONS, "Rechercher un OM, un agent…", "AT", "A. Tazi", "Agent de saisie"),
 ]
 
-for fname, active, content, search, initials, user, role in SCREENS:
+def render(fname, active, content, search, initials, user, role):
     html = SHELL.format(serif=SERIF, nav=nav_html(active), content=content,
                         search=search, initials=initials, user=user, role=role)
     with io.open(os.path.join(OUT, fname), "w", encoding="utf-8") as f:
         f.write(html)
     print("ok", fname, len(html))
+    return html
+
+if __name__ == "__main__":
+    for screen in SCREENS:
+        render(*screen)

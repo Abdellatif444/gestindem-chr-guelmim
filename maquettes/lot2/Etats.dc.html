@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #182420; font-variant-numeric: tabular-nums; }
+    a { color: #10554A; text-decoration: none; }
+    a:hover { color: #0B2E29; text-decoration: underline; }
+  </style>
+</helmet>
+<div style="width: 1440px; height: 900px; display: flex; background: #ECF1EE; overflow: hidden;">
+
+  <!-- ===== Barre latérale ===== -->
+  <div style="width: 236px; height: 900px; background: #0B2E29; display: flex; flex-direction: column; box-sizing: border-box; padding: 20px 14px; flex-shrink: 0;">
+    <div style="display: flex; align-items: center; gap: 11px; padding: 4px 8px 18px 8px;">
+      <svg width="34" height="34" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <rect x="16" y="16" width="40" height="40" stroke="#B98A2F" stroke-width="3"></rect>
+        <rect x="16" y="16" width="40" height="40" stroke="#B98A2F" stroke-width="3" transform="rotate(45 36 36)"></rect>
+        <path d="M36 28 V44 M28 36 H44" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"></path>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 1px;">
+        <span style="font-family: 'IBM Plex Serif', Georgia, serif; font-size: 15.5px; font-weight: 700; letter-spacing: 0.8px; color: #FFFFFF;">GESTIN<span style="color: #B98A2F;">DEM</span></span>
+        <span style="font-size: 11px; color: #7E968D;">CHR Guelmim</span>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1;">
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 8px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>OPÉRATIONS</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect><rect x="10" y="2" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect><rect x="2" y="10" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect><rect x="10" y="10" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Tableau de bord</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="14" height="13" rx="1.5" stroke="#B9CCC5" stroke-width="1.5"></rect><path d="M2 7 H16 M6 1.5 V4.5 M12 1.5 V4.5" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Plannings</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7" stroke="#B9CCC5" stroke-width="1.5"></circle><path d="M9 5.5 V9 L11.5 11" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Indemnités</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 2 L15 5.5 V12.5 L9 16 L3 12.5 V5.5 Z" stroke="#B9CCC5" stroke-width="1.5" stroke-linejoin="round"></path><path d="M9 9 L15 5.5 M9 9 V16 M9 9 L3 5.5" stroke="#B9CCC5" stroke-width="1.2"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Missions</span>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: 7px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7" stroke="#B9CCC5" stroke-width="1.5"></circle><path d="M6 9.2 L8.2 11.4 L12.2 7" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span style="font-size: 13.5px; color: #B9CCC5;">Validation</span>
+        </div>
+        <span style="min-width: 18px; height: 18px; border-radius: 9px; background: #B98A2F; color: #0B2E29; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; padding: 0 5px; box-sizing: border-box;">12</span>
+      </div>
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 14px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>RESTITUTION</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; background: rgba(255,255,255,0.11);">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 2 H11 L15 6 V16 H4 Z" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"></path><path d="M7 9 H12 M7 12 H12" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; font-weight: 600; color: #FFFFFF;">États &amp; rapports</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 15 V9 M9 15 V4 M15 15 V7" stroke="#B9CCC5" stroke-width="1.8" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Statistiques</span>
+      </div>
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 14px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>RÉFÉRENTIELS</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6.5" cy="6" r="2.8" stroke="#B9CCC5" stroke-width="1.5"></circle><circle cx="12.5" cy="7" r="2.2" stroke="#B9CCC5" stroke-width="1.5"></circle><path d="M2 15 C2 12 4 10.5 6.5 10.5 C9 10.5 11 12 11 15 M12.5 11 C14.8 11 16 12.5 16 14.5" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Personnel</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 16 V5 L9 2 L15 5 V16 M3 16 H15 M7 16 V12 H11 V16" stroke="#B9CCC5" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Structures</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5 H15 M3 9 H15 M3 13 H15" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path><circle cx="6.5" cy="5" r="1.6" fill="#0B2E29" stroke="#B9CCC5" stroke-width="1.4"></circle><circle cx="11.5" cy="9" r="1.6" fill="#0B2E29" stroke="#B9CCC5" stroke-width="1.4"></circle><circle cx="8" cy="13" r="1.6" fill="#0B2E29" stroke="#B9CCC5" stroke-width="1.4"></circle></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Barèmes</span>
+      </div>
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 14px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>SYSTÈME</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1.5 L15 4 V8.5 C15 12 12.6 14.8 9 16.5 C5.4 14.8 3 12 3 8.5 V4 Z" stroke="#B9CCC5" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Administration</span>
+      </div>
+    </div>
+
+    <div style="padding: 10px 10px 0; border-top: 1px solid rgba(255,255,255,0.09); font-size: 11.5px; color: #8BA39A;">v1.0 · Dernière sauvegarde 02:00</div>
+  </div>
+
+  <!-- ===== Zone principale ===== -->
+  <div style="flex-grow: 1; display: flex; flex-direction: column; min-width: 0;">
+
+    <!-- Barre supérieure -->
+    <div style="height: 60px; background: #FFFFFF; border-bottom: 1px solid #DBE3DE; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; flex-shrink: 0;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 8px; border: 1px solid #DBE3DE; border-radius: 8px; padding: 7px 12px; background: #F6F9F7;">
+          <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 16 V5 L9 2 L15 5 V16 M3 16 H15" stroke="#61706A" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+          <span style="font-size: 13px; font-weight: 500; color: #182420;">CHR de Guelmim</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; border: 1px solid #DBE3DE; border-radius: 8px; padding: 7px 12px; background: #F6F9F7;">
+          <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="14" height="13" rx="1.5" stroke="#61706A" stroke-width="1.5"></rect><path d="M2 7 H16 M6 1.5 V4.5 M12 1.5 V4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          <span style="font-size: 13px; font-weight: 500; color: #182420;">Août 2026</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 8px; border: 1px solid #DBE3DE; border-radius: 8px; padding: 7px 12px; width: 240px; box-sizing: border-box;">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="4.5" stroke="#66746D" stroke-width="1.5"></circle><path d="M10.5 10.5 L14 14" stroke="#66746D" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          <span style="font-size: 13px; color: #66746D;">Rechercher un rapport…</span>
+        </div>
+        <div style="position: relative;">
+          <svg width="19" height="19" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2.5 C7 2.5 5.2 4.8 5.2 7.5 V10.5 L3.5 13.5 H16.5 L14.8 10.5 V7.5 C14.8 4.8 13 2.5 10 2.5 Z" stroke="#61706A" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8.5 16 C8.8 16.9 9.3 17.3 10 17.3 C10.7 17.3 11.2 16.9 11.5 16" stroke="#61706A" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          <span style="position: absolute; top: -7px; right: -9px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: #B3261E; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 1.5px solid #FFFFFF; box-sizing: border-box;">3</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; padding-left: 16px; border-left: 1px solid #DBE3DE;">
+          <div style="width: 34px; height: 34px; border-radius: 17px; background: #DCEBE6; color: #10554A; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center;">NE</div>
+          <div style="display: flex; flex-direction: column; gap: 1px;">
+            <span style="font-size: 13px; font-weight: 600; color: #182420;">N. El Fassi</span>
+            <span style="font-size: 12px; color: #61706A;">Validateur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenu -->
+    <div style="flex-grow: 1; padding: 18px 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box; overflow: hidden;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-family: 'IBM Plex Serif', Georgia, serif; font-size: 23px; font-weight: 700; color: #182420;">États &amp; rapports</div>
+          <div style="font-size: 13px; color: #61706A;">Rapports mensuels, trimestriels et annuels — exports Excel, PDF et CSV — archive des rapports générés</div>
+        </div>
+        <div style="display: flex; gap: 10px;"></div>
+      </div>
+
+      <div style="display: flex; gap: 16px; flex-grow: 1; min-height: 0;">
+        <div style="width: 360px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 18px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px; flex-shrink: 0;">
+          <div style="display: flex; align-items: center; justify-content: space-between;"><span style="font-size: 14.5px; font-weight: 600; color: #182420;">Générer un état</span></div>
+          <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 13px; font-weight: 600; color: #3A4741;">Type d'état</label><div style="height: 42px; border: 1px solid #C9D3CD; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; box-sizing: border-box;"><span style="font-size: 13px; color: #182420;">Récapitulatif mensuel des indemnités</span><svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+          <div style="display: flex; gap: 10px;"><div style="display: flex; flex-direction: column; gap: 6px; flex-grow: 1;"><label style="font-size: 13px; font-weight: 600; color: #3A4741;">Période</label><div style="height: 42px; border: 1px solid #C9D3CD; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; box-sizing: border-box;"><span style="font-size: 13px; color: #182420;">Août 2026</span><svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div style="display: flex; flex-direction: column; gap: 6px; flex-grow: 1;"><label style="font-size: 13px; font-weight: 600; color: #3A4741;">Structure</label><div style="height: 42px; border: 1px solid #C9D3CD; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; box-sizing: border-box;"><span style="font-size: 13px; color: #182420;">CHR de Guelmim</span><svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div>
+          <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 13px; font-weight: 600; color: #3A4741;">Détail par</label><div style="height: 42px; border: 1px solid #C9D3CD; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; box-sizing: border-box;"><span style="font-size: 13px; color: #182420;">Service</span><svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><span style="font-size: 12px; color: #66746D;">Choisir : service, agent ou type d'indemnité</span></div>
+          <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 13px; font-weight: 600; color: #3A4741;">Format</label><div style="display: flex; gap: 8px; flex-wrap: wrap;"><span style="padding: 7px 14px; background: #10554A; color: #FFFFFF; border-radius: 20px; font-size: 12.5px; font-weight: 600;">PDF</span><span style="padding: 7px 14px; background: #FFFFFF; color: #3A4741; border: 1px solid #DBE3DE; border-radius: 20px; font-size: 12.5px; font-weight: 500;">Excel</span><span style="padding: 7px 14px; background: #FFFFFF; color: #3A4741; border: 1px solid #DBE3DE; border-radius: 20px; font-size: 12.5px; font-weight: 500;">CSV</span></div></div>
+          <div style="display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; background: #F6F9F7; border: 1px solid #E9EEEA; border-radius: 8px;">
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #66746D; text-transform: uppercase;">Aperçu du contenu</span>
+            <span style="font-size: 12.5px; color: #3A4741; line-height: 1.5;">9 services · 248 agents · 4 types d'indemnité · total 184 250 DH · lots validés et prêts pour paiement uniquement</span>
+          </div>
+          <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;"><button style="height: 38px; padding: 0 16px; width: 100%; justify-content: center; height: 42px; background: #10554A; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; color: #FFFFFF; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; display: flex; align-items: center; gap: 8px; cursor: pointer;">Générer le rapport (PDF)</button>
+            <span style="font-size: 12px; color: #66746D; text-align: center;">Le rapport est archivé automatiquement et horodaté.</span>
+          </div>
+        </div>
+
+        <div style="flex-grow: 1; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; min-width: 0;">
+          <div style="display: flex; align-items: center; justify-content: space-between;"><span style="font-size: 14.5px; font-weight: 600; color: #182420;">Archive des rapports générés</span><div style="display: flex; gap: 8px;"><div style="display: flex; align-items: center; gap: 7px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 8px; padding: 8px 12px;"><span style="font-size: 12px; color: #66746D;">Type</span><span style="font-size: 13px; font-weight: 500; color: #182420;">Tous</span><svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div style="display: flex; align-items: center; gap: 7px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 8px; padding: 8px 12px;"><span style="font-size: 12px; color: #66746D;">Exercice</span><span style="font-size: 13px; font-weight: 500; color: #182420;">2026</span><svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div>
+          <div style="display: flex; flex-direction: column;"><div style="display: grid; grid-template-columns: 1fr 120px 90px 90px 55px 120px; gap: 8px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #66746D; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;"><span>Rapport</span><span>Période</span><span>Généré par</span><span>Le</span><span>Format</span><span></span></div><div style="display: grid; grid-template-columns: 1fr 120px 90px 90px 55px 120px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;"><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">Récapitulatif mensuel des indemnités</span><span style="font-size: 12px; color: #66746D;">CHR de Guelmim</span></span><span style="color: #3A4741;">Août 2026</span><span style="color: #3A4741;">H. Bouzid</span><span style="color: #3A4741;">31/08 18:10</span><span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">PDF</span></span><span style="display: flex; gap: 10px; justify-content: flex-end; align-items: center;"><a href="#" style="font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 4px;"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2 V10 M8 10 L5 7 M8 10 L11 7 M2.5 13.5 H13.5" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Télécharger</a><span style="width: 28px; height: 28px; border: 1px solid #DBE3DE; border-radius: 7px; display: flex; align-items: center; justify-content: center;" title="Régénérer"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8 A5 5 0 1 1 11.5 4.5 M11.5 2 V4.8 H8.7" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></span></div><div style="display: grid; grid-template-columns: 1fr 120px 90px 90px 55px 120px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;"><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">État par service — Urgences</span><span style="font-size: 12px; color: #66746D;">CHR de Guelmim</span></span><span style="color: #3A4741;">Août 2026</span><span style="color: #3A4741;">N. El Fassi</span><span style="color: #3A4741;">31/08 17:22</span><span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Excel</span></span><span style="display: flex; gap: 10px; justify-content: flex-end; align-items: center;"><a href="#" style="font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 4px;"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2 V10 M8 10 L5 7 M8 10 L11 7 M2.5 13.5 H13.5" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Télécharger</a><span style="width: 28px; height: 28px; border: 1px solid #DBE3DE; border-radius: 7px; display: flex; align-items: center; justify-content: center;" title="Régénérer"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8 A5 5 0 1 1 11.5 4.5 M11.5 2 V4.8 H8.7" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></span></div><div style="display: grid; grid-template-columns: 1fr 120px 90px 90px 55px 120px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;"><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">Déplacements — missions clôturées</span><span style="font-size: 12px; color: #66746D;">CHR de Guelmim</span></span><span style="color: #3A4741;">Juillet 2026</span><span style="color: #3A4741;">A. Tazi</span><span style="color: #3A4741;">04/08 10:05</span><span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">CSV</span></span><span style="display: flex; gap: 10px; justify-content: flex-end; align-items: center;"><a href="#" style="font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 4px;"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2 V10 M8 10 L5 7 M8 10 L11 7 M2.5 13.5 H13.5" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Télécharger</a><span style="width: 28px; height: 28px; border: 1px solid #DBE3DE; border-radius: 7px; display: flex; align-items: center; justify-content: center;" title="Régénérer"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8 A5 5 0 1 1 11.5 4.5 M11.5 2 V4.8 H8.7" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></span></div><div style="display: grid; grid-template-columns: 1fr 120px 90px 90px 55px 120px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;"><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">Récapitulatif trimestriel</span><span style="font-size: 12px; color: #66746D;">Direction régionale</span></span><span style="color: #3A4741;">T2 2026 (avr.–juin)</span><span style="color: #3A4741;">H. Bouzid</span><span style="color: #3A4741;">07/07 09:31</span><span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">PDF</span></span><span style="display: flex; gap: 10px; justify-content: flex-end; align-items: center;"><a href="#" style="font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 4px;"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2 V10 M8 10 L5 7 M8 10 L11 7 M2.5 13.5 H13.5" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Télécharger</a><span style="width: 28px; height: 28px; border: 1px solid #DBE3DE; border-radius: 7px; display: flex; align-items: center; justify-content: center;" title="Régénérer"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8 A5 5 0 1 1 11.5 4.5 M11.5 2 V4.8 H8.7" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></span></div><div style="display: grid; grid-template-columns: 1fr 120px 90px 90px 55px 120px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;"><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">État par agent — Dr Y. Benali</span><span style="font-size: 12px; color: #66746D;">CHR de Guelmim</span></span><span style="color: #3A4741;">Janv.–Juin 2026</span><span style="color: #3A4741;">N. El Fassi</span><span style="color: #3A4741;">02/07 14:48</span><span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">PDF</span></span><span style="display: flex; gap: 10px; justify-content: flex-end; align-items: center;"><a href="#" style="font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 4px;"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2 V10 M8 10 L5 7 M8 10 L11 7 M2.5 13.5 H13.5" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Télécharger</a><span style="width: 28px; height: 28px; border: 1px solid #DBE3DE; border-radius: 7px; display: flex; align-items: center; justify-content: center;" title="Régénérer"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8 A5 5 0 1 1 11.5 4.5 M11.5 2 V4.8 H8.7" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></span></div><div style="display: grid; grid-template-columns: 1fr 120px 90px 90px 55px 120px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; "><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">Récapitulatif annuel</span><span style="font-size: 12px; color: #66746D;">CHR de Guelmim</span></span><span style="color: #3A4741;">Année 2025</span><span style="color: #3A4741;">H. Bouzid</span><span style="color: #3A4741;">12/01 11:15</span><span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Excel</span></span><span style="display: flex; gap: 10px; justify-content: flex-end; align-items: center;"><a href="#" style="font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 4px;"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2 V10 M8 10 L5 7 M8 10 L11 7 M2.5 13.5 H13.5" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Télécharger</a><span style="width: 28px; height: 28px; border: 1px solid #DBE3DE; border-radius: 7px; display: flex; align-items: center; justify-content: center;" title="Régénérer"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8 A5 5 0 1 1 11.5 4.5 M11.5 2 V4.8 H8.7" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></span></div></div>
+          <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #E9EEEA;"><span style="font-size: 12px; color: #66746D;">6 rapports affichés sur 41 · conservés 10 ans</span><div style="display: flex; align-items: center; gap: 6px;"><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3 L4.5 6 L7.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size: 12.5px; font-weight: 600; color: #182420; padding: 0 4px;">Page 1 sur 7</span><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 3 L7.5 6 L4.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

@@ -20,3 +20,7 @@ Desktop.ini
 *.log
 extraction_pdf.txt
 extraction_avis.txt
+
+# --- Python (generateur de maquettes) ---
+__pycache__/
+*.pyc
