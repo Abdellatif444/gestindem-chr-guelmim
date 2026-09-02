@@ -1,0 +1,23 @@
+{
+  "pages": [
+    { "id": "lot1", "name": "Lot 1 — Validé" },
+    { "id": "lot2", "name": "Lot 2 — En revue" }
+  ],
+  "artboards": [
+    { "file": "Identite.dc.html", "page": "lot1", "x": 0, "y": 0, "w": 1200, "h": 880 },
+    { "file": "Connexion.dc.html", "page": "lot1", "x": 1320, "y": 0, "w": 1440, "h": 900 },
+    { "file": "Main.dc.html", "page": "lot1", "x": 0, "y": 1040, "w": 1440, "h": 900 },
+    { "file": "Planning.dc.html", "page": "lot1", "x": 1560, "y": 1040, "w": 1440, "h": 900 },
+    { "file": "Validation.dc.html", "page": "lot1", "x": 0, "y": 2080, "w": 1440, "h": 900 },
+
+    { "file": "Personnel.dc.html", "page": "lot2", "x": 0, "y": 0, "w": 1440, "h": 900 },
+    { "file": "Structures.dc.html", "page": "lot2", "x": 1560, "y": 0, "w": 1440, "h": 900 },
+    { "file": "Baremes.dc.html", "page": "lot2", "x": 0, "y": 1040, "w": 1440, "h": 900 },
+    { "file": "Missions.dc.html", "page": "lot2", "x": 1560, "y": 1040, "w": 1440, "h": 900 }
+  ],
+  "annotations": [
+    { "id": "lot1-note", "page": "lot1", "x": 0, "y": -170, "w": 420, "text": "GESTINDEM — Lot 1 VALIDÉ (identité + 4 écrans clés)\nDonnées fictives de démonstration ; barèmes réels paramétrés dans l'application.\nAdopté après audit frontend-design : fond froid teal, signature khatam, chiffres tabulaires, KPI hiérarchisés, titres IBM Plex Serif + wordmark bicolore." },
+    { "id": "lot2-note", "page": "lot2", "x": 0, "y": -150, "w": 520, "text": "Lot 2 — fournée 1/2 à valider : Personnel (M3), Structures (M2), Barèmes (M4), Missions (M7/M8).\nFournée 2 à venir : Calcul des indemnités, États & rapports, Statistiques, Administration." }
+  ],
+  "launch": { "view": "canvas", "page": "lot2" }
+}
