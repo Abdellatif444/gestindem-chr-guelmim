@@ -17,7 +17,7 @@
   ],
   "annotations": [
     { "id": "lot1-note", "page": "lot1", "x": 0, "y": -170, "w": 420, "text": "GESTINDEM — Lot 1 VALIDÉ (identité + 4 écrans clés)\nDonnées fictives de démonstration ; barèmes réels paramétrés dans l'application.\nAdopté après audit frontend-design : fond froid teal, signature khatam, chiffres tabulaires, KPI hiérarchisés, titres IBM Plex Serif + wordmark bicolore." },
-    { "id": "lot2-note", "page": "lot2", "x": 0, "y": -150, "w": 520, "text": "Lot 2 — fournée 1/2 à valider : Personnel (M3), Structures (M2), Barèmes (M4), Missions (M7/M8).\nFournée 2 à venir : Calcul des indemnités, États & rapports, Statistiques, Administration." }
+    { "id": "lot2-note", "page": "lot2", "x": 0, "y": -150, "w": 520, "text": "Lot 2 — fournée 1/2 : Personnel (M3), Structures (M2), Barèmes (M4), Missions (M7/M8). Corrections de l'audit UX appliquées (F-02 à F-11).\nFournée 2 à venir : Calcul des indemnités, États & rapports, Statistiques, Administration + mini-lot « saisie & états » (formulaires de planning et d'ordre de mission, confirmations, états vides/erreur)." }
   ],
   "launch": { "view": "canvas", "page": "lot2" }
 }
