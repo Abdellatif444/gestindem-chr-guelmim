@@ -294,7 +294,7 @@ ADMIN = page_header(
         <div style="width: 780px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; flex-shrink: 0;">
           """ + card_title("Utilisateurs et droits d'accès", '<div style="display: flex; gap: 8px;">' + sel("Profil", "Tous") + sel("Structure", "Toutes") + '</div>') + """
           <div style="display: flex; flex-direction: column;">""" + user_table + """</div>
-          """ + alert("info", "Quatre profils : <strong>administrateur</strong>, <strong>agent de saisie</strong>, <strong>validateur</strong>, <strong>consultation</strong>. Les droits se règlent par module et par structure sur la fiche de chaque utilisateur.") + """
+          """ + alert("info", "Quatre profils : <strong>administrateur</strong>, <strong>agent de saisie</strong>, <strong>validateur</strong>, <strong>consultation</strong>. Le <strong>validateur</strong> assure la vérification (étape 2) puis la validation (étape 3). Les droits se règlent par module et par structure sur la fiche de chaque utilisateur.") + """
           """ + footer("6 utilisateurs affichés sur 23 · déconnexion automatique après 15 min d'inactivité", pager("Page 1 sur 4")) + """
         </div>
 
@@ -329,12 +329,12 @@ def drawer(title, sub, body, footer_html, width=460):
         '<div style="flex-grow: 1; padding: 18px 24px; display: flex; flex-direction: column; gap: 14px; overflow: hidden;">%s</div>'
         '<div style="padding: 14px 24px 20px; border-top: 1px solid #E9EEEA; display: flex; flex-direction: column; gap: 10px;">%s</div></div>') % (width, SERIF, title, sub, CLOSE, body, footer_html)
 
-def modal(title, body, footer_html, width=560):
+def modal(title, body, footer_html, width=560, top=250):
     left = (1440 - width) // 2
-    return BACKDROP + ('<div style="position: absolute; top: 250px; left: %dpx; width: %dpx; background: #FFFFFF; border-radius: 12px; box-shadow: 0 24px 64px rgba(11,46,41,0.28); display: flex; flex-direction: column; box-sizing: border-box; overflow: hidden;">'
+    return BACKDROP + ('<div style="position: absolute; top: %dpx; left: %dpx; width: %dpx; background: #FFFFFF; border-radius: 12px; box-shadow: 0 24px 64px rgba(11,46,41,0.28); display: flex; flex-direction: column; box-sizing: border-box; overflow: hidden;">'
         '<div style="padding: 22px 26px 6px;"><span style="font-family: %s; font-size: 20px; font-weight: 700;">%s</span></div>'
         '<div style="padding: 10px 26px 18px; display: flex; flex-direction: column; gap: 12px;">%s</div>'
-        '<div style="padding: 14px 26px 20px; background: #F6F9F7; border-top: 1px solid #E9EEEA; display: flex; justify-content: flex-end; gap: 10px;">%s</div></div>') % (left, width, SERIF, title, body, footer_html)
+        '<div style="padding: 14px 26px 20px; background: #F6F9F7; border-top: 1px solid #E9EEEA; display: flex; justify-content: flex-end; gap: 10px;">%s</div></div>') % (top, left, width, SERIF, title, body, footer_html)
 
 def toast(kind, html, action=""):
     styles = {"ok": ("#0F3B33", "#FFFFFF", "#7CD4B4"), "err": ("#7A1A1A", "#FFFFFF", "#FFC9C4")}
@@ -374,7 +374,18 @@ planning_ok = planning.replace(
 planning_ok = planning_ok.replace('<div style="border-right: 1px solid #EDF1EE; padding: 6px 8px;"><span style="font-size: 12px; font-weight: 600; color: #61706A;">13</span>',
                                   '<div style="border-right: 1px solid #EDF1EE; padding: 6px 8px; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 12px; font-weight: 600; color: #61706A;">13</span>', 1)
 assert planning_ok != planning, "cellule du 13 introuvable"
-write_out("PlanningEnregistre.dc.html", with_overlay(planning_ok, toast("ok", "<strong>Garde enregistrée</strong> — Dr Y. Benali, jeudi 13/08/2026, 24 h, Urgences. Journalisée à 09:52.", "Saisir le 14/08 →")))
+serie_body = (
+    alert("ok", "<strong>Garde du 13/08 enregistrée</strong> — Dr Y. Benali, 24 h, Urgences. Journalisée à 09:52.", "Annuler")
+    + '<div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 13px; font-weight: 600; color: #3A4741;">Type</label>' + segmented(["Garde", "Astreinte", "Permanence"], "Garde") + '</div>'
+    + field("Agent", "Dr Y. Benali — M-04512 · Urgences", help_text="Conservé pour la série", grow=False)
+    + '<div style="display: flex; gap: 10px;">' + field_text("Date", "Vendredi 14/08/2026", help_text="Jour suivant, modifiable", grow=True) + field("Service", "Urgences", grow=True) + '</div>'
+    + '<div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 13px; font-weight: 600; color: #3A4741;">Durée</label>' + chips(["Nuit · 12 h", "24 h", "Week-end · 48 h", "Autre…"], "24 h") + '</div>'
+    + field_text("Commentaire (facultatif)", "ex. remplacement du Dr Saidi", placeholder=True, grow=False)
+)
+serie_footer = ('<div style="display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: #3A4741;"><span style="width: 18px; height: 18px; border-radius: 4px; border: 1.5px solid #10554A; background: #10554A; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 6.2 L5 8.6 L9.5 3.8" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>Saisie en série : le formulaire reste ouvert au jour suivant pour le même agent</div>'
+    '<div style="display: flex; gap: 10px;"><div style="flex-grow: 1;">' + btn_secondary("Terminer la série").replace('padding: 0 16px;', 'padding: 0 16px; width: 100%; justify-content: center;') + '</div><div style="flex-grow: 2;">' + btn_primary("Enregistrer la garde", plus=False).replace('padding: 0 16px;', 'padding: 0 16px; width: 100%; justify-content: center;') + '</div></div>'
+    '<span style="font-size: 12px; color: #66746D; text-align: center;">4 saisies dans cette série · Échap ou « Terminer la série » ferme le formulaire.</span>')
+write_out("PlanningEnregistre.dc.html", with_overlay(planning_ok, drawer("Nouvelle saisie", "Planning — Urgences · Août 2026 · saisie en série", serie_body, serie_footer)))
 
 # --- Missions : formulaire d'ordre de mission avec calcul prévisionnel en direct
 missions_html = render("Missions.dc.html", "Missions", MISSIONS, "Rechercher un OM, un agent…", "AT", "A. Tazi", "Agent de saisie")
@@ -403,27 +414,39 @@ confirm_footer = btn_secondary("Annuler") + btn_primary("Confirmer la validation
 write_out("ValidationConfirm.dc.html", with_overlay(validation, modal("Valider le lot LOT-2026-0142 ?", confirm_body, confirm_footer)))
 
 # --- Validation : succès (lot retiré, suivant sélectionné, compteurs à jour)
-v_ok = validation
-v_ok = v_ok.replace('<span style="font-size: 19px; font-weight: 700; color: #10554A;">12 lots</span>', '<span style="font-size: 19px; font-weight: 700; color: #10554A;">11 lots</span>')
-v_ok = v_ok.replace('<span style="font-size: 12px; color: #3A5C52;">98' + NB + '640' + NB + 'DH</span>', '<span style="font-size: 12px; color: #3A5C52;">80' + NB + '190' + NB + 'DH</span>')
+def sans_0142(base):
+    """Lot 0142 retiré de la liste, lot 0140 sélectionné, compteur « à traiter » à 11."""
+    v = base
+    v, n = re.subn(r'\s*<div style="display: grid; grid-template-columns: 130px 110px 105px 60px 95px 70px; gap: 10px; padding: 10px; font-size: 13px; align-items: center; background: #EDF4F1; box-shadow: inset 0 0 0 1\.5px #10554A; border-radius: 8px;">\s*<span style="font-weight: 700; color: #10554A;">LOT-2026-0142</span>.*?3' + NB + r'j</span></span>\s*</div>', "", v, count=1, flags=re.S)
+    assert n == 1, "ligne 0142 introuvable"
+    v = v.replace('<div style="display: grid; grid-template-columns: 130px 110px 105px 60px 95px 70px; gap: 10px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;">\n              <span style="font-weight: 600; color: #10554A;">LOT-2026-0140</span>',
+                  '<div style="display: grid; grid-template-columns: 130px 110px 105px 60px 95px 70px; gap: 10px; padding: 10px; font-size: 13px; align-items: center; background: #EDF4F1; box-shadow: inset 0 0 0 1.5px #10554A; border-radius: 8px;">\n              <span style="font-weight: 700; color: #10554A;">LOT-2026-0140</span>', 1)
+    v = v.replace("6 lots affichés sur 12", "5 lots affichés sur 11").replace("En attente (12)", "En attente (11)")
+    v = v.replace('<span style="font-size: 19px; font-weight: 700; color: #10554A;">12 lots</span>', '<span style="font-size: 19px; font-weight: 700; color: #10554A;">11 lots</span>')
+    v = v.replace('<span style="font-size: 12px; color: #3A5C52;">98' + NB + '640' + NB + 'DH</span>', '<span style="font-size: 12px; color: #3A5C52;">80' + NB + '190' + NB + 'DH</span>')
+    v = v.replace('>12</span>\n      </div>', '>11</span>\n      </div>', 1)  # badge sidebar
+    v = (v.replace("LOT-2026-0142</span>", "LOT-2026-0140</span>", 1)
+          .replace("Gardes — Urgences · Août 2026 · 12 agents", "Gardes — Chirurgie · Août 2026 · 9 agents")
+          .replace('<span style="font-size: 24px; font-weight: 700; color: #182420;">18' + NB + '450</span>', '<span style="font-size: 24px; font-weight: 700; color: #182420;">14' + NB + '780</span>')
+          .replace("Dr Y. Benali — 6 gardes", "Dr R. Chakir — 5 gardes").replace("3" + NB + "600" + NB + "DH</span>", "3" + NB + "000" + NB + "DH</span>", 1)
+          .replace("Dr K. Saidi — 5 gardes", "Dr N. Lamrani — 5 gardes").replace("Dr M. El Idrissi — 4 gardes", "Dr F. Zahidi — 4 gardes")
+          .replace("Voir les 12 lignes du lot", "Voir les 9 lignes du lot")
+          .replace("26/08/2026 à 09:14", "27/08/2026 à 10:05").replace("28/08/2026 à 11:02", "30/08/2026 à 15:30").replace("depuis 3 jours", "depuis 2 jours"))
+    return v
+
+v_ok = sans_0142(validation)
 v_ok = v_ok.replace('<span style="font-size: 19px; font-weight: 700; color: #182420;">23 lots</span>', '<span style="font-size: 19px; font-weight: 700; color: #182420;">24 lots</span>')
 v_ok = v_ok.replace('<span style="font-size: 12px; color: #66746D;">96' + NB + '830' + NB + 'DH</span>', '<span style="font-size: 12px; color: #66746D;">115' + NB + '280' + NB + 'DH</span>')
-v_ok = v_ok.replace('>12</span>\n      </div>', '>11</span>\n      </div>', 1)  # badge sidebar
-# retirer la ligne 0142 et sélectionner 0140
-v_ok, n = re.subn(r'\s*<div style="display: grid; grid-template-columns: 130px 110px 105px 60px 95px 70px; gap: 10px; padding: 10px; font-size: 13px; align-items: center; background: #EDF4F1; box-shadow: inset 0 0 0 1\.5px #10554A; border-radius: 8px;">\s*<span style="font-weight: 700; color: #10554A;">LOT-2026-0142</span>.*?3' + NB + r'j</span></span>\s*</div>', "", v_ok, count=1, flags=re.S)
-assert n == 1, "ligne 0142 introuvable"
-v_ok = v_ok.replace('<div style="display: grid; grid-template-columns: 130px 110px 105px 60px 95px 70px; gap: 10px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;">\n              <span style="font-weight: 600; color: #10554A;">LOT-2026-0140</span>',
-                    '<div style="display: grid; grid-template-columns: 130px 110px 105px 60px 95px 70px; gap: 10px; padding: 10px; font-size: 13px; align-items: center; background: #EDF4F1; box-shadow: inset 0 0 0 1.5px #10554A; border-radius: 8px;">\n              <span style="font-weight: 700; color: #10554A;">LOT-2026-0140</span>', 1)
-v_ok = v_ok.replace("6 lots affichés sur 12", "5 lots affichés sur 11")
-# panneau de détail : lot suivant
-v_ok = (v_ok.replace("LOT-2026-0142</span>", "LOT-2026-0140</span>", 1)
-            .replace("Gardes — Urgences · Août 2026 · 12 agents", "Gardes — Chirurgie · Août 2026 · 9 agents")
-            .replace('<span style="font-size: 24px; font-weight: 700; color: #182420;">18' + NB + '450</span>', '<span style="font-size: 24px; font-weight: 700; color: #182420;">14' + NB + '780</span>')
-            .replace("Dr Y. Benali — 6 gardes", "Dr R. Chakir — 5 gardes").replace("3" + NB + "600" + NB + "DH</span>", "3" + NB + "000" + NB + "DH</span>", 1)
-            .replace("Dr K. Saidi — 5 gardes", "Dr N. Lamrani — 5 gardes").replace("Dr M. El Idrissi — 4 gardes", "Dr F. Zahidi — 4 gardes")
-            .replace("Voir les 12 lignes du lot", "Voir les 9 lignes du lot")
-            .replace("26/08/2026 à 09:14", "27/08/2026 à 10:05").replace("28/08/2026 à 11:02", "30/08/2026 à 15:30").replace("depuis 3 jours", "depuis 2 jours"))
+v_ok = v_ok.replace("Prêts pour paiement (23)", "Prêts pour paiement (24)")
 write_out("ValidationSucces.dc.html", with_overlay(v_ok, toast("ok", "<strong>Lot LOT-2026-0142 validé</strong> — 18" + NB + "450" + NB + "DH · prêt pour paiement · journalisé le 02/09/2026 à 09:12 (N. El Fassi).", "Annuler (5 min)")))
+
+# --- Validation : rejet (W-05) — le lot repart en saisie avec le motif
+v_rej = sans_0142(validation)
+v_rej = v_rej.replace('<span style="font-size: 19px; font-weight: 700; color: #182420;">8 lots</span>', '<span style="font-size: 19px; font-weight: 700; color: #182420;">9 lots</span>')
+v_rej = v_rej.replace('<span style="font-size: 12px; color: #66746D;">21' + NB + '340' + NB + 'DH</span>', '<span style="font-size: 12px; color: #66746D;">39' + NB + '790' + NB + 'DH</span>')
+v_rej = v_rej.replace("Rejetés (2)", "Rejetés (3)")
+write_out("ValidationRejete.dc.html", with_overlay(v_rej, toast("ok", "<strong>Lot LOT-2026-0142 renvoyé à la saisie</strong> — motif transmis à A. Tazi (notification) · 18" + NB + "450" + NB + "DH retirés de l'attente · journalisé le 02/09/2026 à 09:14.", "Annuler (5 min)")))
+
 
 # --- Validation : état vide
 v_empty = validation
@@ -438,7 +461,7 @@ assert n == 1, "tableau des lots introuvable"
 v_empty = v_empty.replace('<span style="font-size: 19px; font-weight: 700; color: #10554A;">12 lots</span>', '<span style="font-size: 19px; font-weight: 700; color: #10554A;">0 lot</span>')
 v_empty = v_empty.replace('<span style="font-size: 12px; color: #3A5C52;">98' + NB + '640' + NB + 'DH</span>', '<span style="font-size: 12px; color: #3A5C52;">0' + NB + 'DH</span>')
 v_empty = v_empty.replace('<span style="font-size: 19px; font-weight: 700; color: #182420;">23 lots</span>', '<span style="font-size: 19px; font-weight: 700; color: #182420;">24 lots</span>')
-v_empty = v_empty.replace("6 lots affichés sur 12", "0 lot en attente")
+v_empty = v_empty.replace("6 lots affichés sur 12", "0 lot en attente").replace("En attente (12)", "En attente (0)").replace("Prêts pour paiement (23)", "Prêts pour paiement (24)")
 v_empty, n = re.subn(r'\s*<span style="min-width: 18px; height: 18px; border-radius: 9px; background: #B98A2F;[^>]*>12</span>', "", v_empty, count=1)
 # panneau de droite : vide aussi
 v_empty, n2 = re.subn(r'(<div style="flex-grow: 1; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 18px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">).*?(?=\n      </div>\n\n    </div>)',
@@ -470,8 +493,48 @@ import_body = (
 import_footer = btn_secondary("Télécharger le rapport d'erreurs", DL_ICON) + btn_secondary("Annuler") + btn_primary("Importer les 12 lignes valides", plus=False)
 write_out("PersonnelImportErreur.dc.html", with_overlay(personnel_html, modal("Import Excel — personnel_aout_2026.xlsx", import_body, import_footer, width=720)))
 
+# --- Missions : ordre créé (W-01)
+write_out("MissionCree.dc.html", with_overlay(missions_html, toast("ok", "<strong>Ordre de mission OM-2026-088 créé</strong> — Dr K. Saidi · Agadir · 25–26/08 · En cours · 1" + NB + "200" + NB + "DH prévisionnels. Journalisé le 20/08/2026 à 14:31 (A. Tazi).", "Modifier")))
+
+# --- Missions : mission clôturée et envoyée au calcul (W-01)
+m_clot = missions_html.replace(badge("En cours", "neutral"), badge("Clôturée", "ok"))
+m_clot = m_clot.replace("En cours (5)", "En cours (4)").replace("Clôturées (6)", "Clôturées (7)")
+m_clot, n = re.subn(r'(<div[^>]*>)\s*<button[^>]*>Modifier</button>\s*<button[^>]*>Clôturer et envoyer au calcul</button>\s*</div>',
+    lambda m: m.group(1) + '<div style="flex-grow: 1;">' + alert("ok", "<strong>Clôturée le 27/08/2026 à 08:45</strong> par A. Tazi — 1" + NB + "200" + NB + "DH envoyés au calcul d'août (barème v3).", "Voir dans Calcul") + '</div></div>', m_clot, count=1, flags=re.S)
+assert n == 1, "boutons Missions introuvables"
+write_out("MissionCloturee.dc.html", with_overlay(m_clot, toast("ok", "<strong>Mission OM-2026-088 clôturée</strong> — 1" + NB + "200" + NB + "DH envoyés au calcul d'août 2026. Journalisé le 27/08/2026 à 08:45 (A. Tazi).", "Voir dans Calcul")))
+
+# --- Validation : lignes du lot (W-02)
+LIGNES_GRID = "1fr 150px 130px 70px 90px 80px"
+lignes = [
+    ("Dr Y. Benali", "Médecin spécialiste", "6 · 01, 09, 12, 22, 29, 30/08", "600", "3" + NB + "600"),
+    ("Dr K. Saidi", "Médecin spécialiste", "5 · 02, 08, 15, 21, 29/08", "600", "3" + NB + "000"),
+    ("Dr M. El Idrissi", "Médecin généraliste", "4 · 08, 16, 23, 30/08", "500", "2" + NB + "000"),
+    ("Dr S. Ouazzani", "Médecin généraliste", "3 · 05, 16, 26/08", "500", "1" + NB + "500"),
+    ("Dr A. Boulahya", "Médecin spécialiste", "3 · 03, 17, 24/08", "600", "1" + NB + "800"),
+    ("Dr H. Sbai", "Médecin spécialiste", "3 · 06, 13, 27/08", "600", "1" + NB + "800"),
+    ("Dr W. Kettani", "Médecin généraliste", "3 · 07, 19, 28/08", "500", "1" + NB + "500"),
+    ("Inf. L. Mansouri", "Infirmier anesthésiste", "3 · 04, 18, 25/08", "300", "900"),
+    ("Inf. S. Bakkali", "Infirmier polyvalent", "3 · 10, 20, 31/08", "300", "900"),
+    ("Inf. R. Amrani", "Infirmier polyvalent", "2 · 11, 14/08", "300", "600"),
+    ("Inf. H. Ouhadda", "Infirmier polyvalent", "2 · 01, 15/08", "300", "600"),
+    ("Tech. H. Drissi", "Technicien radiologie", "1 · 22/08", "250", "250"),
+]
+lignes_table = thead(["Agent", "Grade", "Gardes · dates", "Taux", "Montant", ""], LIGNES_GRID) + "".join(
+    trow(['<span style="font-weight: 600;">%s</span>' % a, '<span style="color: #3A4741;">%s</span>' % g, '<span style="color: #3A4741;">%s</span>' % d,
+          '<span style="color: #3A4741;">%s' % t + NB + 'DH</span>', '<span style="font-weight: 700;">%s' % m + NB + 'DH</span>',
+          '<a href="#" style="font-size: 12.5px; font-weight: 600; text-align: right;">Planning</a>'], LIGNES_GRID, False, i == len(lignes) - 1)
+    for i, (a, g, d, t, m) in enumerate(lignes))
+lignes_body = (
+    '<span style="font-size: 13px; color: #61706A;">12 agents · 38 gardes · barème v3 (effet 01/07/2026) · issues des plannings d\'août validés par S. Mansouri le 28/08.</span>'
+    '<div style="display: flex; flex-direction: column;">' + lignes_table + '</div>'
+    '<div style="display: flex; justify-content: space-between; align-items: baseline; padding: 8px 10px; background: #F6F9F7; border-radius: 8px;"><span style="font-size: 13px; font-weight: 700;">Total du lot</span><span style="font-size: 18px; font-weight: 700;">18' + NB + '450' + NB + 'DH</span></div>'
+)
+lignes_footer = btn_secondary("Fermer") + btn_secondary("Exporter (Excel)") + btn_primary("Valider le lot", plus=False)
+write_out("ValidationLignes.dc.html", with_overlay(validation, modal("Lignes du lot LOT-2026-0142 — Gardes, Urgences, août 2026", lignes_body, lignes_footer, width=880, top=48)))
+
 # ============================== rendu des 4 écrans ==============================
-render("Calcul.dc.html", "Indemnités", CALCUL, "Rechercher un agent…", "HB", "H. Bouzid", "Administrateur")
+render("Calcul.dc.html", "Calcul", CALCUL, "Rechercher un agent…", "HB", "H. Bouzid", "Administrateur")
 render("Etats.dc.html", "États &amp; rapports", ETATS, "Rechercher un rapport…", "NE", "N. El Fassi", "Validateur")
 render("Statistiques.dc.html", "Statistiques", STATS, "Rechercher…", "MR", "M. Raji", "Consultation")
 render("Administration.dc.html", "Administration", ADMIN, "Rechercher un utilisateur…", "HB", "H. Bouzid", "Administrateur")

@@ -31,7 +31,7 @@ NAV = [
     ("group", "OPÉRATIONS"),
     ("dash", "Tableau de bord", None),
     ("cal", "Plannings", None),
-    ("clock", "Indemnités", None),
+    ("clock", "Calcul", None),
     ("box", "Missions", None),
     ("check", "Validation", "12"),
     ("group", "RESTITUTION"),
@@ -449,7 +449,7 @@ MISSIONS = page_header(
       <div style="display: flex; align-items: center; gap: 8px;">
         <span style="padding: 7px 14px; background: #10554A; color: #FFFFFF; border-radius: 20px; font-size: 12.5px; font-weight: 600;">Toutes (14)</span>
         <span style="padding: 7px 14px; background: #FFFFFF; color: #61706A; border: 1px solid #DBE3DE; border-radius: 20px; font-size: 12.5px;">En cours (5)</span>
-        <span style="padding: 7px 14px; background: #FFFFFF; color: #61706A; border: 1px solid #DBE3DE; border-radius: 20px; font-size: 12.5px;">À valider (3)</span>
+        <span style="padding: 7px 14px; background: #FFFFFF; color: #61706A; border: 1px solid #DBE3DE; border-radius: 20px; font-size: 12.5px;">À clôturer (3)</span>
         <span style="padding: 7px 14px; background: #FFFFFF; color: #61706A; border: 1px solid #DBE3DE; border-radius: 20px; font-size: 12.5px;">Clôturées (6)</span>
       </div>
 
@@ -463,7 +463,7 @@ MISSIONS = page_header(
               <span style="font-weight: 700; color: #10554A;">OM-2026-088</span><span style="font-weight: 600;">Dr K. Saidi</span><span>Agadir</span><span>25/08</span><span>2""" + NB + """j</span><span>452""" + NB + """km</span><span>""" + badge("En cours", "neutral") + """</span>
             </div>
             <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;">
-              <span style="font-weight: 600; color: #10554A;">OM-2026-087</span><span style="font-weight: 600;">Inf. R. Amrani</span><span>Tan-Tan</span><span>24/08</span><span>1""" + NB + """j</span><span>125""" + NB + """km</span><span>""" + badge("À valider", "warn") + """</span>
+              <span style="font-weight: 600; color: #10554A;">OM-2026-087</span><span style="font-weight: 600;">Inf. R. Amrani</span><span>Tan-Tan</span><span>24/08</span><span>1""" + NB + """j</span><span>125""" + NB + """km</span><span>""" + badge("À clôturer", "warn") + """</span>
             </div>
             <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;">
               <span style="font-weight: 600; color: #10554A;">OM-2026-086</span><span style="font-weight: 600;">Dr Y. Benali</span><span>Sidi Ifni</span><span>21/08</span><span>1""" + NB + """j</span><span>68""" + NB + """km</span><span>""" + badge("Clôturée", "ok") + """</span>
@@ -472,7 +472,7 @@ MISSIONS = page_header(
               <span style="font-weight: 600; color: #10554A;">OM-2026-085</span><span style="font-weight: 600;">Tech. H. Drissi</span><span>Bouizakarne</span><span>19/08</span><span>1""" + NB + """j</span><span>42""" + NB + """km</span><span>""" + badge("Clôturée", "ok") + """</span>
             </div>
             <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;">
-              <span style="font-weight: 600; color: #10554A;">OM-2026-084</span><span style="font-weight: 600;">Dr S. Ouazzani</span><span>Laâyoune</span><span>17/08</span><span>3""" + NB + """j</span><span>298""" + NB + """km</span><span>""" + badge("À valider", "warn") + """</span>
+              <span style="font-weight: 600; color: #10554A;">OM-2026-084</span><span style="font-weight: 600;">Dr S. Ouazzani</span><span>Laâyoune</span><span>17/08</span><span>3""" + NB + """j</span><span>298""" + NB + """km</span><span>""" + badge("À clôturer", "warn") + """</span>
             </div>
             <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center;">
               <span style="font-weight: 600; color: #10554A;">OM-2026-083</span><span style="font-weight: 600;">Inf. L. Mansouri</span><span>Rabat</span><span>11/08</span><span>4""" + NB + """j</span><span>642""" + NB + """km</span><span>""" + badge("Clôturée", "ok") + """</span>

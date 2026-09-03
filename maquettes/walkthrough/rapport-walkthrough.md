@@ -182,6 +182,10 @@ Les « non » en gras touchent directement les scénarios évalués ; les autres
 
 Survol des cases du calendrier ; comportement des listes déroulantes (agent, service) ; ordre de tabulation et focus dans les tiroirs ; défilement du tiroir de saisie à 900 px ; délai d'apparition et de disparition des toasts ; conservation d'un brouillon de saisie.
 
+## Suite donnée (2026-09-03)
+
+Décision : tout corriger. W-01 → nouvelles planches `MissionCree` et `MissionCloturee` (toast + état « Clôturée » + lien vers Calcul) ; W-02 → `ValidationLignes` (12 lignes, total, « Valider le lot » depuis la vue) ; W-03 → ligne d'avancement du mois sur Plannings ; W-04 → `PlanningEnregistre` refait : le tiroir reste ouvert au 14/08, agent conservé, bandeau « Garde du 13/08 enregistrée » ; W-05 → `ValidationRejete` ; W-06 → filtres En attente / Prêts pour paiement / Rejetés / Tous ; W-07 → nav « Calcul », missions « À clôturer », rôle du validateur explicité dans Administration (point à confirmer avec le client) ; W-08 → case « + Saisir une garde » au survol, tuile « Traiter → » sur le tableau de bord. Les nœuds rouges de la carte correspondant à W-01, W-02 et W-05 ont désormais une capture.
+
 ## Trois corrections prioritaires
 
 1. **Dessiner les retours manquants** (W-01, W-05) : création et clôture d'ordre de mission, rejet d'un lot — 3 planches, même mécanique toast + mise à jour que ValidationSucces.

@@ -1,37 +1,251 @@
 {
   "pages": [
-    { "id": "lot1", "name": "Lot 1 — Validé" },
-    { "id": "lot2", "name": "Lot 2 — En revue" },
-    { "id": "etats", "name": "Saisie & états — En revue" }
+    {
+      "id": "lot1",
+      "name": "Lot 1 — Validé"
+    },
+    {
+      "id": "lot2",
+      "name": "Lot 2 — En revue"
+    },
+    {
+      "id": "etats",
+      "name": "Saisie & états — En revue"
+    }
   ],
   "artboards": [
-    { "file": "Identite.dc.html", "page": "lot1", "x": 0, "y": 0, "w": 1200, "h": 880 },
-    { "file": "Connexion.dc.html", "page": "lot1", "x": 1320, "y": 0, "w": 1440, "h": 900 },
-    { "file": "Main.dc.html", "page": "lot1", "x": 0, "y": 1040, "w": 1440, "h": 900 },
-    { "file": "Planning.dc.html", "page": "lot1", "x": 1560, "y": 1040, "w": 1440, "h": 900 },
-    { "file": "Validation.dc.html", "page": "lot1", "x": 0, "y": 2080, "w": 1440, "h": 900 },
-
-    { "file": "Personnel.dc.html", "page": "lot2", "x": 0, "y": 0, "w": 1440, "h": 900 },
-    { "file": "Structures.dc.html", "page": "lot2", "x": 1560, "y": 0, "w": 1440, "h": 900 },
-    { "file": "Baremes.dc.html", "page": "lot2", "x": 0, "y": 1040, "w": 1440, "h": 900 },
-    { "file": "Missions.dc.html", "page": "lot2", "x": 1560, "y": 1040, "w": 1440, "h": 900 },
-    { "file": "Calcul.dc.html", "page": "lot2", "x": 0, "y": 2080, "w": 1440, "h": 900 },
-    { "file": "Etats.dc.html", "page": "lot2", "x": 1560, "y": 2080, "w": 1440, "h": 900 },
-    { "file": "Statistiques.dc.html", "page": "lot2", "x": 0, "y": 3120, "w": 1440, "h": 900 },
-    { "file": "Administration.dc.html", "page": "lot2", "x": 1560, "y": 3120, "w": 1440, "h": 900 },
-
-    { "file": "PlanningSaisie.dc.html", "page": "etats", "title": "Planning — nouvelle saisie (doublon détecté)", "x": 0, "y": 0, "w": 1440, "h": 900 },
-    { "file": "PlanningEnregistre.dc.html", "page": "etats", "title": "Planning — garde enregistrée (saisie en série)", "x": 1560, "y": 0, "w": 1440, "h": 900 },
-    { "file": "MissionSaisie.dc.html", "page": "etats", "title": "Missions — nouvel ordre de mission (calcul en direct)", "x": 0, "y": 1040, "w": 1440, "h": 900 },
-    { "file": "PersonnelImportErreur.dc.html", "page": "etats", "title": "Personnel — import Excel avec erreurs", "x": 1560, "y": 1040, "w": 1440, "h": 900 },
-    { "file": "ValidationConfirm.dc.html", "page": "etats", "title": "Validation — confirmation", "x": 0, "y": 2080, "w": 1440, "h": 900 },
-    { "file": "ValidationSucces.dc.html", "page": "etats", "title": "Validation — succès (lot suivant)", "x": 1560, "y": 2080, "w": 1440, "h": 900 },
-    { "file": "ValidationVide.dc.html", "page": "etats", "title": "Validation — état vide", "x": 0, "y": 3120, "w": 1440, "h": 900 }
+    {
+      "file": "Identite.dc.html",
+      "page": "lot1",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 880
+    },
+    {
+      "file": "Connexion.dc.html",
+      "page": "lot1",
+      "x": 1320,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "Main.dc.html",
+      "page": "lot1",
+      "x": 0,
+      "y": 1040,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "Planning.dc.html",
+      "page": "lot1",
+      "x": 1560,
+      "y": 1040,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "Validation.dc.html",
+      "page": "lot1",
+      "x": 0,
+      "y": 2080,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "Personnel.dc.html",
+      "page": "lot2",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "Structures.dc.html",
+      "page": "lot2",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "Baremes.dc.html",
+      "page": "lot2",
+      "x": 0,
+      "y": 1040,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "Missions.dc.html",
+      "page": "lot2",
+      "x": 1560,
+      "y": 1040,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "Calcul.dc.html",
+      "page": "lot2",
+      "x": 0,
+      "y": 2080,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "Etats.dc.html",
+      "page": "lot2",
+      "x": 1560,
+      "y": 2080,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "Statistiques.dc.html",
+      "page": "lot2",
+      "x": 0,
+      "y": 3120,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "Administration.dc.html",
+      "page": "lot2",
+      "x": 1560,
+      "y": 3120,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "PlanningSaisie.dc.html",
+      "page": "etats",
+      "title": "Planning — nouvelle saisie (doublon détecté)",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "PlanningEnregistre.dc.html",
+      "page": "etats",
+      "title": "Planning — garde enregistrée, série en cours (W-04)",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "MissionSaisie.dc.html",
+      "page": "etats",
+      "title": "Missions — nouvel ordre de mission (calcul en direct)",
+      "x": 0,
+      "y": 1040,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "PersonnelImportErreur.dc.html",
+      "page": "etats",
+      "title": "Personnel — import Excel avec erreurs",
+      "x": 1560,
+      "y": 1040,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "ValidationConfirm.dc.html",
+      "page": "etats",
+      "title": "Validation — confirmation",
+      "x": 0,
+      "y": 2080,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "ValidationSucces.dc.html",
+      "page": "etats",
+      "title": "Validation — succès (lot suivant)",
+      "x": 1560,
+      "y": 2080,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "ValidationVide.dc.html",
+      "page": "etats",
+      "title": "Validation — état vide",
+      "x": 0,
+      "y": 3120,
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "file": "ValidationLignes.dc.html",
+      "title": "Validation — lignes du lot (W-02)",
+      "x": 1560,
+      "y": 3120,
+      "w": 1440,
+      "h": 900,
+      "page": "etats"
+    },
+    {
+      "file": "MissionCree.dc.html",
+      "title": "Missions — ordre créé (W-01)",
+      "x": 0,
+      "y": 4160,
+      "w": 1440,
+      "h": 900,
+      "page": "etats"
+    },
+    {
+      "file": "MissionCloturee.dc.html",
+      "title": "Missions — clôturée, envoyée au calcul (W-01)",
+      "x": 1560,
+      "y": 4160,
+      "w": 1440,
+      "h": 900,
+      "page": "etats"
+    },
+    {
+      "file": "ValidationRejete.dc.html",
+      "title": "Validation — lot rejeté (W-05)",
+      "x": 0,
+      "y": 5200,
+      "w": 1440,
+      "h": 900,
+      "page": "etats"
+    }
   ],
   "annotations": [
-    { "id": "lot1-note", "page": "lot1", "x": 0, "y": -170, "w": 420, "text": "GESTINDEM — Lot 1 VALIDÉ (identité + 4 écrans clés)\nDonnées fictives de démonstration ; barèmes réels paramétrés dans l'application.\nAdopté après audit frontend-design : fond froid teal, signature khatam, chiffres tabulaires, KPI hiérarchisés, titres IBM Plex Serif + wordmark bicolore." },
-    { "id": "lot2-note", "page": "lot2", "x": 0, "y": -150, "w": 560, "text": "Lot 2 complet — à valider. Fournée 1 : Personnel (M3), Structures (M2), Barèmes (M4), Missions (M7/M8). Fournée 2 : Calcul des indemnités (M6), États & rapports (M10), Statistiques (M11), Administration (M1/M12).\nLes formulaires, confirmations et états vides/erreur sont sur la page « Saisie & états »." },
-    { "id": "etats-note", "page": "etats", "x": 0, "y": -150, "w": 560, "text": "Mini-lot « saisie & états » — issu de l'audit UX (F-01, F-07) : chaque action importante a désormais un résultat dessiné.\nÀ lire par paire : saisie → enregistré ; validation → confirmation → succès ; liste pleine → liste vide ; import → erreurs." }
+    {
+      "id": "lot1-note",
+      "page": "lot1",
+      "x": 0,
+      "y": -170,
+      "w": 420,
+      "text": "GESTINDEM — Lot 1 VALIDÉ (identité + 4 écrans clés)\nDonnées fictives de démonstration ; barèmes réels paramétrés dans l'application.\nAdopté après audit frontend-design : fond froid teal, signature khatam, chiffres tabulaires, KPI hiérarchisés, titres IBM Plex Serif + wordmark bicolore."
+    },
+    {
+      "id": "lot2-note",
+      "page": "lot2",
+      "x": 0,
+      "y": -150,
+      "w": 560,
+      "text": "Lot 2 complet — à valider. Fournée 1 : Personnel (M3), Structures (M2), Barèmes (M4), Missions (M7/M8). Fournée 2 : Calcul des indemnités (M6), États & rapports (M10), Statistiques (M11), Administration (M1/M12).\nLes formulaires, confirmations et états vides/erreur sont sur la page « Saisie & états »."
+    },
+    {
+      "id": "etats-note",
+      "page": "etats",
+      "x": 0,
+      "y": -150,
+      "w": 560,
+      "text": "Saisie & états — corrections du walkthrough appliquées (W-01 à W-08).\\nNouveaux : ordre de mission créé / clôturé, lignes du lot, lot rejeté ; saisie en série cohérente ; avancement du mois ; filtres de validation ; vocabulaire « Calcul » et « À clôturer »."
+    }
   ],
-  "launch": { "view": "canvas", "page": "lot2" }
+  "launch": {
+    "view": "canvas",
+    "page": "etats"
+  }
 }
