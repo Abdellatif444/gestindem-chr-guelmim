@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; color: #182420; font-variant-numeric: tabular-nums; }
+    a { color: #10554A; text-decoration: none; }
+    a:hover { color: #0B2E29; text-decoration: underline; }
+  </style>
+</helmet>
+<div style="width: 1440px; height: 900px; display: flex; background: #ECF1EE; overflow: hidden;">
+
+  <!-- ===== Barre latérale ===== -->
+  <div style="width: 236px; height: 900px; background: #0B2E29; display: flex; flex-direction: column; box-sizing: border-box; padding: 20px 14px; flex-shrink: 0;">
+    <div style="display: flex; align-items: center; gap: 11px; padding: 4px 8px 18px 8px;">
+      <svg width="34" height="34" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <rect x="16" y="16" width="40" height="40" stroke="#B98A2F" stroke-width="3"></rect>
+        <rect x="16" y="16" width="40" height="40" stroke="#B98A2F" stroke-width="3" transform="rotate(45 36 36)"></rect>
+        <path d="M36 28 V44 M28 36 H44" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"></path>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 1px;">
+        <span style="font-family: 'IBM Plex Serif', Georgia, serif; font-size: 15.5px; font-weight: 700; letter-spacing: 0.8px; color: #FFFFFF;">GESTIN<span style="color: #B98A2F;">DEM</span></span>
+        <span style="font-size: 12px; color: #7E968D;">CHR Guelmim</span>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1;">
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 8px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>OPÉRATIONS</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect><rect x="10" y="2" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect><rect x="2" y="10" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect><rect x="10" y="10" width="6" height="6" rx="1" stroke="#B9CCC5" stroke-width="1.5"></rect></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Tableau de bord</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="14" height="13" rx="1.5" stroke="#B9CCC5" stroke-width="1.5"></rect><path d="M2 7 H16 M6 1.5 V4.5 M12 1.5 V4.5" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Plannings</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7" stroke="#B9CCC5" stroke-width="1.5"></circle><path d="M9 5.5 V9 L11.5 11" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Calcul</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; background: rgba(255,255,255,0.11);">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 2 L15 5.5 V12.5 L9 16 L3 12.5 V5.5 Z" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"></path><path d="M9 9 L15 5.5 M9 9 V16 M9 9 L3 5.5" stroke="#FFFFFF" stroke-width="1.2"></path></svg>
+        <span style="font-size: 13.5px; font-weight: 600; color: #FFFFFF;">Missions</span>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: 7px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7" stroke="#B9CCC5" stroke-width="1.5"></circle><path d="M6 9.2 L8.2 11.4 L12.2 7" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span style="font-size: 13.5px; color: #B9CCC5;">Validation</span>
+        </div>
+        <span style="min-width: 18px; height: 18px; border-radius: 9px; background: #B98A2F; color: #0B2E29; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; padding: 0 5px; box-sizing: border-box;">12</span>
+      </div>
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 14px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>RESTITUTION</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 2 H11 L15 6 V16 H4 Z" stroke="#B9CCC5" stroke-width="1.5" stroke-linejoin="round"></path><path d="M7 9 H12 M7 12 H12" stroke="#B9CCC5" stroke-width="1.4" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">États &amp; rapports</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 15 V9 M9 15 V4 M15 15 V7" stroke="#B9CCC5" stroke-width="1.8" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Statistiques</span>
+      </div>
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 14px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>RÉFÉRENTIELS</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6.5" cy="6" r="2.8" stroke="#B9CCC5" stroke-width="1.5"></circle><circle cx="12.5" cy="7" r="2.2" stroke="#B9CCC5" stroke-width="1.5"></circle><path d="M2 15 C2 12 4 10.5 6.5 10.5 C9 10.5 11 12 11 15 M12.5 11 C14.8 11 16 12.5 16 14.5" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Personnel</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 16 V5 L9 2 L15 5 V16 M3 16 H15 M7 16 V12 H11 V16" stroke="#B9CCC5" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Structures</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5 H15 M3 9 H15 M3 13 H15" stroke="#B9CCC5" stroke-width="1.5" stroke-linecap="round"></path><circle cx="6.5" cy="5" r="1.6" fill="#0B2E29" stroke="#B9CCC5" stroke-width="1.4"></circle><circle cx="11.5" cy="9" r="1.6" fill="#0B2E29" stroke="#B9CCC5" stroke-width="1.4"></circle><circle cx="8" cy="13" r="1.6" fill="#0B2E29" stroke="#B9CCC5" stroke-width="1.4"></circle></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Barèmes</span>
+      </div>
+      <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; color: #8BA39A; padding: 14px 10px 4px;"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" style="margin-right: 6px; vertical-align: -1px;" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2"></rect><rect x="6.5" y="6.5" width="11" height="11" stroke="#B98A2F" stroke-width="2.2" transform="rotate(45 12 12)"></rect></svg>SYSTÈME</div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1.5 L15 4 V8.5 C15 12 12.6 14.8 9 16.5 C5.4 14.8 3 12 3 8.5 V4 Z" stroke="#B9CCC5" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        <span style="font-size: 13.5px; color: #B9CCC5;">Administration</span>
+      </div>
+    </div>
+
+    <div style="padding: 10px 10px 0; border-top: 1px solid rgba(255,255,255,0.09); font-size: 12px; color: #8BA39A;">v1.0 · Dernière sauvegarde 02:00</div>
+  </div>
+
+  <!-- ===== Zone principale ===== -->
+  <div style="flex-grow: 1; display: flex; flex-direction: column; min-width: 0;">
+
+    <!-- Barre supérieure -->
+    <div style="height: 60px; background: #FFFFFF; border-bottom: 1px solid #DBE3DE; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; box-sizing: border-box; flex-shrink: 0;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 8px; border: 1px solid #DBE3DE; border-radius: 8px; padding: 7px 12px; background: #F6F9F7;">
+          <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 16 V5 L9 2 L15 5 V16 M3 16 H15" stroke="#61706A" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+          <span style="font-size: 13px; font-weight: 500; color: #182420;">CHR de Guelmim</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; border: 1px solid #DBE3DE; border-radius: 8px; padding: 7px 12px; background: #F6F9F7;">
+          <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="14" height="13" rx="1.5" stroke="#61706A" stroke-width="1.5"></rect><path d="M2 7 H16 M6 1.5 V4.5 M12 1.5 V4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          <span style="font-size: 13px; font-weight: 500; color: #182420;">Août 2026</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 8px; border: 1px solid #DBE3DE; border-radius: 8px; padding: 7px 12px; width: 240px; box-sizing: border-box;">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="4.5" stroke="#5C6B64" stroke-width="1.5"></circle><path d="M10.5 10.5 L14 14" stroke="#5C6B64" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          <span style="font-size: 13px; color: #5C6B64;">Rechercher un OM, un agent…</span>
+        </div>
+        <div style="position: relative;">
+          <svg width="19" height="19" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2.5 C7 2.5 5.2 4.8 5.2 7.5 V10.5 L3.5 13.5 H16.5 L14.8 10.5 V7.5 C14.8 4.8 13 2.5 10 2.5 Z" stroke="#61706A" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8.5 16 C8.8 16.9 9.3 17.3 10 17.3 C10.7 17.3 11.2 16.9 11.5 16" stroke="#61706A" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          <span style="position: absolute; top: -7px; right: -9px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: #B3261E; color: #FFFFFF; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 1.5px solid #FFFFFF; box-sizing: border-box;">3</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; padding-left: 16px; border-left: 1px solid #DBE3DE;">
+          <div style="width: 34px; height: 34px; border-radius: 17px; background: #DCEBE6; color: #10554A; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center;">AT</div>
+          <div style="display: flex; flex-direction: column; gap: 1px;">
+            <span style="font-size: 13px; font-weight: 600; color: #182420;">A. Tazi</span>
+            <span style="font-size: 12px; color: #61706A;">Agent de saisie</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenu -->
+    <div style="flex-grow: 1; padding: 18px 24px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box; overflow: hidden;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-family: 'IBM Plex Serif', Georgia, serif; font-size: 23px; font-weight: 700; color: #182420;">Missions &amp; déplacements</div>
+          <div style="font-size: 13px; color: #61706A;">Ordres de mission et historique complet des déplacements</div>
+        </div>
+        <div style="display: flex; gap: 10px;"><button style="height: 38px; padding: 0 16px; background: #FFFFFF; border: 1px solid #C9D3CD; border-radius: 8px; font-size: 13px; font-weight: 600; color: #182420; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; display: flex; align-items: center; gap: 8px; cursor: pointer;">Exporter (Excel)</button><button style="height: 38px; padding: 0 16px; background: #10554A; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; color: #FFFFFF; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; display: flex; align-items: center; gap: 8px; cursor: pointer;"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3 V13 M3 8 H13" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"></path></svg>Nouvel ordre de mission</button></div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="padding: 7px 14px; background: #10554A; color: #FFFFFF; border-radius: 20px; font-size: 12.5px; font-weight: 600;">Toutes (14)</span>
+        <span style="padding: 7px 14px; background: #FFFFFF; color: #61706A; border: 1px solid #DBE3DE; border-radius: 20px; font-size: 12.5px;">En cours (5)</span>
+        <span style="padding: 7px 14px; background: #FFFFFF; color: #61706A; border: 1px solid #DBE3DE; border-radius: 20px; font-size: 12.5px;">À clôturer (3)</span>
+        <span style="padding: 7px 14px; background: #FFFFFF; color: #61706A; border: 1px solid #DBE3DE; border-radius: 20px; font-size: 12.5px;">Clôturées (6)</span>
+      </div>
+
+      <div style="display: flex; gap: 16px; flex-grow: 1; min-height: 0;">
+        <div style="flex-grow: 1; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #5C6B64; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">
+            <span>N° OM</span><span>Agent</span><span>Destination</span><span>Départ</span><span>Durée</span><span>Distance</span><span>État</span>
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;">
+              <span style="font-weight: 600; color: #10554A;">OM-2026-088</span><span style="font-weight: 600;">Dr K. Saidi</span><span>Agadir</span><span>25/08</span><span>2 j</span><span>452 km</span><span><span style="background: #E8EDEA; color: #5B6660; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">En cours</span></span>
+            </div>
+            <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;">
+              <span style="font-weight: 600; color: #10554A;">OM-2026-087</span><span style="font-weight: 600;">Inf. R. Amrani</span><span>Tan-Tan</span><span>24/08</span><span>1 j</span><span>125 km</span><span><span style="background: #FBEEDC; color: #92400E; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">À clôturer</span></span>
+            </div>
+            <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;">
+              <span style="font-weight: 600; color: #10554A;">OM-2026-086</span><span style="font-weight: 600;">Dr Y. Benali</span><span>Sidi Ifni</span><span>21/08</span><span>1 j</span><span>68 km</span><span><span style="background: #E4F2E9; color: #17663F; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Clôturée</span></span>
+            </div>
+            <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;">
+              <span style="font-weight: 600; color: #10554A;">OM-2026-085</span><span style="font-weight: 600;">Tech. H. Drissi</span><span>Bouizakarne</span><span>19/08</span><span>1 j</span><span>42 km</span><span><span style="background: #E4F2E9; color: #17663F; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Clôturée</span></span>
+            </div>
+            <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; border-bottom: 1px solid #EDF1EE;">
+              <span style="font-weight: 600; color: #10554A;">OM-2026-084</span><span style="font-weight: 600;">Dr S. Ouazzani</span><span>Laâyoune</span><span>17/08</span><span>3 j</span><span>298 km</span><span><span style="background: #FBEEDC; color: #92400E; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">À clôturer</span></span>
+            </div>
+            <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center; background: #EDF4F1; box-shadow: inset 0 0 0 1.5px #10554A; border-radius: 8px;">
+              <span style="font-weight: 700; color: #10554A;">OM-2026-083</span><span style="font-weight: 600;">Inf. L. Mansouri</span><span>Rabat</span><span>11/08</span><span>4 j</span><span>642 km</span><span><span style="background: #E4F2E9; color: #17663F; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Clôturée</span></span>
+            </div>
+          </div>
+          <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #E9EEEA;">
+            <span style="font-size: 12px; color: #5C6B64;">6 missions affichées sur 14 — Août 2026</span>
+            <div style="display: flex; align-items: center; gap: 16px;"><a href="#" style="font-size: 12.5px; font-weight: 600;">Historique complet des déplacements</a><div style="display: flex; align-items: center; gap: 6px;"><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3 L4.5 6 L7.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size: 12.5px; font-weight: 600; color: #182420; padding: 0 4px;">Page 1 sur 3</span><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 3 L7.5 6 L4.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></div>
+          </div>
+        </div>
+
+        <div style="width: 400px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 18px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 13px; flex-shrink: 0;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+            <div style="display: flex; flex-direction: column; gap: 3px;">
+              <span style="font-size: 16px; font-weight: 700; color: #182420;">OM-2026-083</span>
+              <span style="font-size: 12.5px; color: #61706A;">Inf. L. Mansouri · Groupe C · Réanimation</span>
+            </div>
+            <span style="background: #E4F2E9; color: #17663F; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 20px;">Clôturée</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; justify-content: space-between; font-size: 12.5px; padding: 5px 0; border-bottom: 1px solid #EDF1EE;"><span style="color: #61706A;">Trajet</span><span style="font-weight: 600;">Guelmim → Rabat</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 12.5px; padding: 5px 0; border-bottom: 1px solid #EDF1EE;"><span style="color: #61706A;">Motif</span><span style="font-weight: 600;">Formation nationale — anesthésie</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 12.5px; padding: 5px 0; border-bottom: 1px solid #EDF1EE;"><span style="color: #61706A;">Dates</span><span style="font-weight: 600;">11–14/08/2026 (4 jours)</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 12.5px; padding: 5px 0;"><span style="color: #61706A;">Distance</span><span style="font-weight: 600;">642 km (aller)</span></div>
+          </div>
+
+          <div style="background: #F6F9F7; border: 1px solid #E9EEEA; border-radius: 8px; padding: 12px 14px; display: flex; flex-direction: column; gap: 7px;">
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase;">Indemnité prévisionnelle — détail du calcul</span>
+            <div style="display: flex; justify-content: space-between; font-size: 12.5px;"><span style="color: #3A4741;">Durée × indemnité journalière (Groupe C)</span><span>4 × 250 DH</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 12.5px;"><span style="color: #3A4741;">Coefficient de distance (&gt; 150 km)</span><span>× 1,5</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 12.5px;"><span style="color: #3A4741;">Sous-total</span><span>1 500 DH</span></div><div style="display: flex; justify-content: space-between; font-size: 12.5px;"><span style="color: #92400E;">Plafond Groupe C par mission (1 200 DH)</span><span style="color: #92400E;">− 300 DH</span></div><div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; border-top: 1px solid #E9EEEA; padding-top: 7px;"><span>Total (plafond appliqué)</span><span style="font-size: 18px; font-weight: 700;">1 200 DH</span></div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase;">Historique</span>
+            <div style="display: flex; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 4px; background: #17663F; margin-top: 4px; flex-shrink: 0;"></span><span style="font-size: 12.5px; color: #3A4741;">Créé par <strong>A. Tazi</strong> — 05/08/2026 à 10:12</span></div>
+            <div style="display: flex; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 4px; background: #17663F; margin-top: 4px; flex-shrink: 0;"></span><span style="font-size: 12.5px; color: #3A4741;">Clôturée le 15/08/2026 à 09:30 — envoyée au calcul d'août</span></div>
+          </div>
+
+          <div style="margin-top: auto; display: flex; gap: 10px;"><div style="flex-grow: 1;"><div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; background: #FBEEDC; border: 1px solid #F1D9B4; border-radius: 8px; padding: 10px 14px;"><div style="display: flex; align-items: center; gap: 10px;"><svg width="17" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;"><path d="M9 2 L17 15.5 H1 Z" stroke="#7A5210" stroke-width="1.5" stroke-linejoin="round"></path><path d="M9 7 V11 M9 13 V13.2" stroke="#7A5210" stroke-width="1.6" stroke-linecap="round"></path></svg><span style="font-size: 13px; color: #7A5210; line-height: 1.45;"><strong>Plafond appliqué :</strong> 4 jours × 250 DH × 1,5 = 1 500 DH, ramenés au plafond du groupe C (1 200 DH par mission, barème v3).</span></div><a href="#" style="font-size: 13px; font-weight: 600; color: #7A5210; flex-shrink: 0;">Voir le barème</a></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

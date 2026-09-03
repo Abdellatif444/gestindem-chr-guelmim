@@ -216,6 +216,51 @@
       "w": 1440,
       "h": 900,
       "page": "etats"
+    },
+    {
+      "file": "MissionPlafonnee.dc.html",
+      "title": "Missions — plafond appliqué (M8)",
+      "x": 1560,
+      "y": 5200,
+      "w": 1440,
+      "h": 900,
+      "page": "etats"
+    },
+    {
+      "file": "Notifications.dc.html",
+      "title": "Notifications (M9)",
+      "x": 0,
+      "y": 6240,
+      "w": 1440,
+      "h": 900,
+      "page": "etats"
+    },
+    {
+      "file": "MotDePasse.dc.html",
+      "title": "Changer mon mot de passe (M1)",
+      "x": 1560,
+      "y": 6240,
+      "w": 1440,
+      "h": 900,
+      "page": "etats"
+    },
+    {
+      "file": "RestaurationConfirm.dc.html",
+      "title": "Administration — restaurer une sauvegarde (M12)",
+      "x": 0,
+      "y": 7280,
+      "w": 1440,
+      "h": 900,
+      "page": "etats"
+    },
+    {
+      "file": "UtilisateurFiche.dc.html",
+      "title": "Administration — fiche utilisateur, droits module × structure (M1)",
+      "x": 1560,
+      "y": 7280,
+      "w": 1440,
+      "h": 900,
+      "page": "etats"
     }
   ],
   "annotations": [
@@ -241,7 +286,7 @@
       "x": 0,
       "y": -150,
       "w": 560,
-      "text": "Saisie & états — corrections du walkthrough appliquées (W-01 à W-08).\\nNouveaux : ordre de mission créé / clôturé, lignes du lot, lot rejeté ; saisie en série cohérente ; avancement du mois ; filtres de validation ; vocabulaire « Calcul » et « À clôturer »."
+      "text": "Saisie & états — 20 planches d'états. Corrections du walkthrough (W-01 à W-08) et des audits A/F appliquées.\nAjouts du 03/09 : mot de passe, mission plafonnée, notifications, restauration, fiche utilisateur (droits module × structure)."
     }
   ],
   "launch": {

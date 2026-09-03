@@ -121,8 +121,18 @@ Légende : ✅ couverte · 🟡 partielle · ❌ non maquettée · ⚙️ hors m
 | Démonstration sous 48 h (avis 43/2026) | prototype = scénario de démo ; **jeu de données de démo et scénario écrit** à produire | 🟡 |
 | Livrables : installeur, doc, formation | ⚙️ phases suivantes | ⚙️ |
 
+## Mise à jour du 2026-09-03 — 5 planches ajoutées
+
+| Exigence | Nouvelle preuve | Statut |
+|---|---|---|
+| M1 · changement de mot de passe | `MotDePasse` (modale : actuel, nouveau, confirmation, robustesse, règles, déconnexion des autres sessions, journalisation) | ❌ → ✅ |
+| M1 · droits par module **et** par structure | `UtilisateurFiche` (matrice modules × structures, profil, statut, réinitialisation, désactivation) | 🟡 → ✅ |
+| M8 · plafond par mission | `MissionPlafonnee` (OM-2026-083 : 4 j × 250 × 1,5 = 1 500 → plafond Groupe C 1 200 DH, détail ligne à ligne + explication) | 🟡 → ✅ |
+| M9 · notification des lots en attente | `Notifications` (centre de notifications : délais, recalculs, imports, sauvegardes ; non lues ; préférences) | 🟡 → ✅ |
+| M12 · restauration sécurisée | `RestaurationConfirm` (point de restauration, pertes chiffrées, sauvegarde de sécurité, double confirmation) | ✅ renforcé |
+
 ## Synthèse
 
-- **Couvertes** : 38 exigences · **Partielles** : 8 · **Non maquettée** : 1 · **Hors maquette (technique)** : 4.
-- **À ajouter avant de clore le prototypage** (effort S chacune) : changement de mot de passe (M1) ; un cas de mission **plafonnée** (M8, pour prouver la règle) ; l'écran de **notifications** (M9). Les autres partielles (fiche utilisateur détaillée, paramétrage par structure, édition de barème, journal complet) sont des écrans secondaires acceptables en phase de développement.
+- **Couvertes** : 42 exigences · **Partielles** : 5 (paramétrage par structure, édition de barème, journal complet, notifications e-mail, démo à scénariser) · **Non maquettée** : 0 · **Hors maquette (technique)** : 4.
+- Les partielles restantes sont des écrans secondaires acceptables en phase de développement.
 - **Questions à poser au client** (validation humaine) : (1) valeurs réglementaires des barèmes ; (2) tranches du coefficient de distance ; (3) qui « vérifie » (validateur ou 5ᵉ profil) ; (4) notifications in-app suffisantes ou e-mail exigé.

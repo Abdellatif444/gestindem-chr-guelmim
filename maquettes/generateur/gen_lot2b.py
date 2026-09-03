@@ -537,4 +537,121 @@ write_out("ValidationLignes.dc.html", with_overlay(validation, modal("Lignes du 
 render("Calcul.dc.html", "Calcul", CALCUL, "Rechercher un agent…", "HB", "H. Bouzid", "Administrateur")
 render("Etats.dc.html", "États &amp; rapports", ETATS, "Rechercher un rapport…", "NE", "N. El Fassi", "Validateur")
 render("Statistiques.dc.html", "Statistiques", STATS, "Rechercher…", "MR", "M. Raji", "Consultation")
-render("Administration.dc.html", "Administration", ADMIN, "Rechercher un utilisateur…", "HB", "H. Bouzid", "Administrateur")
+admin_html = render("Administration.dc.html", "Administration", ADMIN, "Rechercher un utilisateur…", "HB", "H. Bouzid", "Administrateur")
+
+# ============================== 5 PLANCHES DES AUDITS A / F ==============================
+main_html = read_lot1("Main.dc.html")
+
+def check(on):
+    if on:
+        return '<span style="width: 18px; height: 18px; border-radius: 4px; border: 1.5px solid #10554A; background: #10554A; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 6.2 L5 8.6 L9.5 3.8" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>'
+    return '<span style="width: 18px; height: 18px; border-radius: 4px; border: 1.5px solid #C9D3CD; background: #FFFFFF; display: flex; flex-shrink: 0;"></span>'
+
+def btn_danger(label):
+    return '<button style="height: 38px; padding: 0 16px; background: #A61B1B; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; color: #FFFFFF; font-family: \'IBM Plex Sans\', \'Segoe UI\', sans-serif; cursor: pointer;">%s</button>' % label
+
+def radio(label, sub, on):
+    dot = ('<span style="width: 18px; height: 18px; border-radius: 9px; border: 5px solid #10554A; background: #FFFFFF; box-sizing: border-box; flex-shrink: 0;"></span>' if on
+           else '<span style="width: 18px; height: 18px; border-radius: 9px; border: 1.5px solid #C9D3CD; background: #FFFFFF; box-sizing: border-box; flex-shrink: 0;"></span>')
+    bg = ' background: #EDF4F1; border-color: #10554A;' if on else ''
+    return ('<div style="display: flex; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid #DBE3DE; border-radius: 8px;%s">%s'
+            '<div style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 13px; font-weight: 600;">%s</span><span style="font-size: 12px; color: #5C6B64;">%s</span></div></div>') % (bg, dot, label, sub)
+
+# --- 1. Changement de mot de passe (M1) — modale depuis le menu utilisateur
+def rule(ok, text):
+    ic = ('<svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7" stroke="#17663F" stroke-width="1.5"></circle><path d="M6 9.2 L8.2 11.4 L12.2 7" stroke="#17663F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>' if ok
+          else '<svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7" stroke="#AEB9B2" stroke-width="1.5"></circle></svg>')
+    return '<span style="display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: %s;">%s%s</span>' % ("#17663F" if ok else "#5C6B64", ic, text)
+mdp_body = (
+    field_text("Mot de passe actuel", "••••••••••••", grow=False)
+    + '<div style="display: flex; gap: 10px;">' + field_text("Nouveau mot de passe", "••••••••••••••", grow=True) + field_text("Confirmer le nouveau mot de passe", "••••••••••••••", grow=True) + '</div>'
+    + '<div style="display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; background: #F6F9F7; border: 1px solid #E9EEEA; border-radius: 8px;">'
+      '<div style="display: flex; align-items: center; justify-content: space-between;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase;">Robustesse</span><span style="font-size: 12.5px; font-weight: 600; color: #17663F;">Forte</span></div>'
+      '<div style="height: 6px; background: #E7EDE9; border-radius: 3px;"><div style="width: 85%; height: 6px; background: #17663F; border-radius: 3px;"></div></div>'
+      '<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 16px; padding-top: 4px;">'
+      + rule(True, "12 caractères minimum") + rule(True, "Une majuscule et une minuscule") + rule(True, "Un chiffre") + rule(False, "Différent des 5 derniers mots de passe — vérifié à l'enregistrement") + '</div></div>'
+    + alert("info", "Vos autres sessions seront déconnectées. Ce changement est journalisé et vous recevrez une notification.")
+)
+mdp_footer = btn_secondary("Annuler") + btn_primary("Enregistrer le nouveau mot de passe", plus=False)
+write_out("MotDePasse.dc.html", with_overlay(main_html, modal("Changer mon mot de passe", mdp_body, mdp_footer, width=600, top=150)))
+
+# --- 2. Mission plafonnée (M8) — OM-2026-083, Groupe C, 4 j, 642 km : 1 500 DH calculés → 1 200 DH plafonnés
+mp = missions_html
+mp, n = re.subn(r'(<div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center;) background: #EDF4F1; box-shadow: inset 0 0 0 1\.5px #10554A; border-radius: 8px;">(\s*<span style="font-weight: )700(; color: #10554A;">OM-2026-088</span>)',
+                r'\g<1> border-bottom: 1px solid #EDF1EE;">\g<2>600\g<3>', mp, count=1)
+assert n == 1, "ligne 088"
+mp, n = re.subn(r'(<div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 10px; font-size: 13px; align-items: center;)">(\s*<span style="font-weight: )600(; color: #10554A;">OM-2026-083</span>)',
+                r'\g<1> background: #EDF4F1; box-shadow: inset 0 0 0 1.5px #10554A; border-radius: 8px;">\g<2>700\g<3>', mp, count=1)
+assert n == 1, "ligne 083"
+mp = (mp.replace('<span style="font-size: 16px; font-weight: 700; color: #182420;">OM-2026-088</span>', '<span style="font-size: 16px; font-weight: 700; color: #182420;">OM-2026-083</span>')
+        .replace("Dr K. Saidi · Groupe A · Réanimation", "Inf. L. Mansouri · Groupe C · Réanimation")
+        .replace("Guelmim → Agadir", "Guelmim → Rabat").replace("Réunion régionale de coordination", "Formation nationale — anesthésie")
+        .replace("25–26/08/2026 (2" + NB + "jours)", "11–14/08/2026 (4" + NB + "jours)").replace("452" + NB + "km (aller)", "642" + NB + "km (aller)")
+        .replace("Durée × indemnité journalière (Groupe A)</span><span>2 × 400", "Durée × indemnité journalière (Groupe C)</span><span>4 × 250")
+        .replace("Créé par <strong>A. Tazi</strong> — 20/08/2026 à 14:31", "Créé par <strong>A. Tazi</strong> — 05/08/2026 à 10:12")
+        .replace("Départ confirmé — 25/08/2026 à 08:02", "Clôturée le 15/08/2026 à 09:30 — envoyée au calcul d'août"))
+mp = mp.replace("Groupe C · Réanimation</span>\n            </div>\n            " + badge("En cours", "neutral"), "Groupe C · Réanimation</span>\n            </div>\n            " + badge("Clôturée", "ok"), 1)
+assert badge("Clôturée", "ok") in mp.split("Groupe C · Réanimation")[1][:400], "badge en-tête"
+mp, n = re.subn(r'(<div style="display: flex; justify-content: space-between;[^"]*"><span[^>]*>)Total \(plafond 2' + NB + '000' + NB + r'DH respecté\)</span><span[^>]*>1' + NB + '200' + NB + 'DH</span></div>',
+    lambda m: ('<div style="display: flex; justify-content: space-between; font-size: 12.5px;"><span style="color: #3A4741;">Sous-total</span><span>1' + NB + '500' + NB + 'DH</span></div>'
+               '<div style="display: flex; justify-content: space-between; font-size: 12.5px;"><span style="color: #92400E;">Plafond Groupe C par mission (1' + NB + '200' + NB + 'DH)</span><span style="color: #92400E;">−' + NB + '300' + NB + 'DH</span></div>'
+               + m.group(1) + 'Total (plafond appliqué)</span><span style="font-size: 18px; font-weight: 700;">1' + NB + '200' + NB + 'DH</span></div>'), mp, count=1)
+assert n == 1, "ligne total"
+mp, n = re.subn(r'(<div[^>]*>)\s*<button[^>]*>Modifier</button>\s*<button[^>]*>Clôturer et envoyer au calcul</button>\s*</div>',
+    lambda m: m.group(1) + '<div style="flex-grow: 1;">' + alert("warn", "<strong>Plafond appliqué :</strong> 4 jours × 250" + NB + "DH × 1,5 = 1" + NB + "500" + NB + "DH, ramenés au plafond du groupe C (1" + NB + "200" + NB + "DH par mission, barème v3).", "Voir le barème") + '</div></div>', mp, count=1, flags=re.S)
+assert n == 1, "boutons"
+write_out("MissionPlafonnee.dc.html", mp)
+
+# --- 3. Centre de notifications (M9) — tiroir depuis la cloche
+def notif(unread, cat, text, when, action):
+    dot = '<span style="width: 8px; height: 8px; border-radius: 4px; background: #B3261E; flex-shrink: 0; margin-top: 6px;"></span>' if unread else '<span style="width: 8px; height: 8px; flex-shrink: 0;"></span>'
+    act = '<a href="#" style="font-size: 12.5px; font-weight: 600; white-space: nowrap;">%s</a>' % action if action else ''
+    return ('<div style="display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid #EDF1EE;%s">%s<div style="display: flex; flex-direction: column; gap: 4px; flex-grow: 1; min-width: 0;">'
+            '<div style="display: flex; align-items: center; gap: 8px;">%s<span style="font-size: 12px; color: #5C6B64;">%s</span></div>'
+            '<span style="font-size: 13px; color: #182420; line-height: 1.45;%s">%s</span></div>%s</div>') % (
+        " background: #F6F9F7; margin: 0 -24px; padding-left: 24px; padding-right: 24px;" if unread else "", dot, badge(cat, "neutral"), when, " font-weight: 600;" if unread else "", text, act)
+notif_body = (
+    '<div style="display: flex; align-items: center; justify-content: space-between;">' + chips(["Toutes (6)", "Non lues (3)"], "Toutes (6)") + '<a href="#" style="font-size: 12.5px; font-weight: 600;">Tout marquer comme lu</a></div>'
+    '<div style="display: flex; flex-direction: column;">'
+    + notif(True, "Validation", "Lot LOT-2026-0136 en attente depuis 5 jours — Radiologie, déplacements, 4" + NB + "980" + NB + "DH", "il y a 2 h", "Traiter")
+    + notif(True, "Calcul", "2 agents à recalculer — planning d'août modifié par A. Tazi (garde du 12/08 supprimée)", "09:40", "Voir")
+    + notif(True, "Personnel", "Import Excel terminé — 12 agents ajoutés, 3 lignes en erreur", "08:55", "Rapport")
+    + notif(False, "Validation", "Vous avez validé le lot LOT-2026-0145 — 11" + NB + "900" + NB + "DH · annulation possible jusqu'à 09:17", "09:12", "")
+    + notif(False, "Barèmes", "Version 3 du barème « Garde — Médecins » en vigueur depuis le 01/07/2026", "hier", "")
+    + notif(False, "Système", "Sauvegarde automatique effectuée — 412" + NB + "Mo, chiffrée", "02:00", "")
+    + '</div>'
+)
+notif_footer = ('<div style="display: flex; align-items: center; justify-content: space-between;"><a href="#" style="font-size: 12.5px; font-weight: 600;">Préférences de notification</a><span style="font-size: 12px; color: #5C6B64;">Dans l\'application · e-mail : à confirmer</span></div>')
+write_out("Notifications.dc.html", with_overlay(main_html, drawer("Notifications", "3 non lues · délais de validation, recalculs, imports, sauvegardes", notif_body, notif_footer, width=470)))
+
+# --- 4. Confirmation de restauration (M12) — action destructive, double confirmation
+rest_body = (
+    '<span style="font-size: 13px; font-weight: 600; color: #3A4741;">Point de restauration</span>'
+    '<div style="display: flex; flex-direction: column; gap: 8px;">' + radio("02/09/2026 à 02:00", "412" + NB + "Mo · la plus récente", False) + radio("01/09/2026 à 02:00", "409" + NB + "Mo · restauration testée le 25/08", True) + radio("31/08/2026 à 02:00", "407" + NB + "Mo · avant le calcul d'août", False) + '</div>'
+    + alert("err", "<strong>Irréversible sans la sauvegarde de sécurité.</strong> La base reviendra à l'état du 01/09 à 02:00. Seront perdus : <strong>14 saisies, 2 validations et 1 import</strong> effectués depuis. Les 3 utilisateurs connectés seront déconnectés.")
+    + '<div style="display: flex; flex-direction: column; padding: 4px 14px; background: #F6F9F7; border: 1px solid #E9EEEA; border-radius: 8px;">' + kv("Sauvegarde de sécurité avant restauration", "Automatique — conservée 30 jours") + kv("Durée estimée", "≈ 4 minutes · application indisponible") + kv("Journal d'audit", "Conservé, action tracée à votre nom") + '</div>'
+    + '<div style="display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: #3A4741;">' + check(True) + 'J\'ai prévenu la DSI et les utilisateurs connectés</div>'
+    + field_text("Tapez RESTAURER pour confirmer", "RESTAU", grow=False)
+)
+rest_footer = btn_secondary("Annuler") + btn_danger("Restaurer la base — 01/09 02:00")
+write_out("RestaurationConfirm.dc.html", with_overlay(admin_html, modal("Restaurer une sauvegarde", rest_body, rest_footer, width=640, top=90)))
+
+# --- 5. Fiche utilisateur : droits par module × structure (M1)
+STRUCTS = ["CHR de Guelmim", "CS Guelmim-Centre", "CS Bouizakarne", "Dél. Tan-Tan"]
+MODULES = [("Plannings", [1, 0, 0, 0]), ("Calcul", [0, 0, 0, 0]), ("Missions", [0, 0, 0, 0]), ("Validation", [1, 0, 0, 0]), ("États & rapports", [1, 0, 0, 0]),
+           ("Statistiques", [0, 0, 0, 0]), ("Personnel", [0, 0, 0, 0]), ("Structures", [0, 0, 0, 0]), ("Barèmes", [0, 0, 0, 0]), ("Administration", [0, 0, 0, 0])]
+GRID_D = "150px repeat(4, minmax(0, 1fr))"
+droits = ('<div style="display: grid; grid-template-columns: %s; gap: 6px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #5C6B64; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;"><span>Module</span>%s</div>' % (GRID_D, "".join('<span style="text-align: center;">%s</span>' % s for s in STRUCTS)))
+for i, (mod, cells) in enumerate(MODULES):
+    droits += ('<div style="display: grid; grid-template-columns: %s; gap: 6px; padding: 6px 10px; font-size: 13px; align-items: center;%s"><span style="font-weight: 600;">%s</span>%s</div>' % (
+        GRID_D, "" if i == len(MODULES) - 1 else " border-bottom: 1px solid #EDF1EE;", mod, "".join('<span style="display: flex; justify-content: center;">%s</span>' % check(c) for c in cells)))
+fiche_body = (
+    '<div style="display: flex; gap: 10px;">' + field_text("Nom", "N. El Fassi", grow=True) + field_text("Identifiant", "n.elfassi", grow=True) + '</div>'
+    '<div style="display: flex; gap: 10px;">' + field("Profil", "Validateur — vérifie et valide les lots", grow=True) + '<div style="display: flex; flex-direction: column; gap: 6px; flex-grow: 1;"><label style="font-size: 13px; font-weight: 600; color: #3A4741;">Statut</label>' + segmented(["Actif", "Désactivé"], "Actif") + '</div></div>'
+    '<div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase;">Droits par module et par structure</span>'
+    '<div style="border: 1px solid #E9EEEA; border-radius: 8px; overflow: hidden;">' + droits + '</div>'
+    '<span style="font-size: 12px; color: #5C6B64;">Le profil fixe les droits par défaut ; les cases les restreignent ou les étendent structure par structure. Une structure non cochée est « hors périmètre » pour cet utilisateur.</span></div>'
+    + kv("Dernière connexion", "02/09/2026 à 08:41") + kv("Mot de passe", "Modifié le 14/06/2026 · expire le 12/12/2026")
+)
+fiche_footer = ('<div style="display: flex; gap: 10px;">' + btn_secondary("Réinitialiser le mot de passe") + btn_danger_outline("Désactiver") + '<div style="flex-grow: 1;"></div>' + btn_primary("Enregistrer", plus=False) + '</div>')
+write_out("UtilisateurFiche.dc.html", with_overlay(admin_html, drawer("N. El Fassi", "Fiche utilisateur · CHR de Guelmim · créée le 12/01/2026 par H. Bouzid", fiche_body, fiche_footer, width=640)))
