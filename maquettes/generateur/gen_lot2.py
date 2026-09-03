@@ -102,7 +102,7 @@ SHELL = """<!doctype html>
       </svg>
       <div style="display: flex; flex-direction: column; gap: 1px;">
         <span style="font-family: {serif}; font-size: 15.5px; font-weight: 700; letter-spacing: 0.8px; color: #FFFFFF;">GESTIN<span style="color: #B98A2F;">DEM</span></span>
-        <span style="font-size: 11px; color: #7E968D;">CHR Guelmim</span>
+        <span style="font-size: 12px; color: #7E968D;">CHR Guelmim</span>
       </div>
     </div>
 
@@ -110,7 +110,7 @@ SHELL = """<!doctype html>
 {nav}
     </div>
 
-    <div style="padding: 10px 10px 0; border-top: 1px solid rgba(255,255,255,0.09); font-size: 11.5px; color: #8BA39A;">v1.0 · Dernière sauvegarde 02:00</div>
+    <div style="padding: 10px 10px 0; border-top: 1px solid rgba(255,255,255,0.09); font-size: 12px; color: #8BA39A;">v1.0 · Dernière sauvegarde 02:00</div>
   </div>
 
   <!-- ===== Zone principale ===== -->
@@ -132,12 +132,12 @@ SHELL = """<!doctype html>
       </div>
       <div style="display: flex; align-items: center; gap: 16px;">
         <div style="display: flex; align-items: center; gap: 8px; border: 1px solid #DBE3DE; border-radius: 8px; padding: 7px 12px; width: 240px; box-sizing: border-box;">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="4.5" stroke="#66746D" stroke-width="1.5"></circle><path d="M10.5 10.5 L14 14" stroke="#66746D" stroke-width="1.5" stroke-linecap="round"></path></svg>
-          <span style="font-size: 13px; color: #66746D;">{search}</span>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="4.5" stroke="#5C6B64" stroke-width="1.5"></circle><path d="M10.5 10.5 L14 14" stroke="#5C6B64" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          <span style="font-size: 13px; color: #5C6B64;">{search}</span>
         </div>
         <div style="position: relative;">
           <svg width="19" height="19" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2.5 C7 2.5 5.2 4.8 5.2 7.5 V10.5 L3.5 13.5 H16.5 L14.8 10.5 V7.5 C14.8 4.8 13 2.5 10 2.5 Z" stroke="#61706A" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8.5 16 C8.8 16.9 9.3 17.3 10 17.3 C10.7 17.3 11.2 16.9 11.5 16" stroke="#61706A" stroke-width="1.5" stroke-linecap="round"></path></svg>
-          <span style="position: absolute; top: -7px; right: -9px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: #B3261E; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 1.5px solid #FFFFFF; box-sizing: border-box;">3</span>
+          <span style="position: absolute; top: -7px; right: -9px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: #B3261E; color: #FFFFFF; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 1.5px solid #FFFFFF; box-sizing: border-box;">3</span>
         </div>
         <div style="display: flex; align-items: center; gap: 10px; padding-left: 16px; border-left: 1px solid #DBE3DE;">
           <div style="width: 34px; height: 34px; border-radius: 17px; background: #DCEBE6; color: #10554A; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center;">{initials}</div>
@@ -178,7 +178,7 @@ def btn_secondary(label, icon=""):
 
 def sel(label, value):
     return ('<div style="display: flex; align-items: center; gap: 7px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 8px; padding: 8px 12px;">'
-        '<span style="font-size: 12px; color: #66746D;">%s</span>'
+        '<span style="font-size: 12px; color: #5C6B64;">%s</span>'
         '<span style="font-size: 13px; font-weight: 500; color: #182420;">%s</span>'
         '<svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>') % (label, value)
 
@@ -219,12 +219,12 @@ PERSONNEL = page_header(
 
       <div style="display: flex; align-items: center; gap: 10px;">
         """ + sel("Grade", "Tous") + sel("Groupe", "Tous") + sel("Service", "Tous") + """
-        <span style="font-size: 12.5px; color: #66746D; margin-left: auto;">248 agents · filtre : aucun</span>
+        <span style="font-size: 12.5px; color: #5C6B64; margin-left: auto;">248 agents · filtre : aucun</span>
       </div>
 
       <div style="display: flex; gap: 16px; flex-grow: 1; min-height: 0;">
         <div style="flex-grow: 1; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px;">
-          <div style="display: grid; grid-template-columns: 80px 160px 160px 65px 110px 70px; gap: 8px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #66746D; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">
+          <div style="display: grid; grid-template-columns: 80px 160px 160px 65px 110px 70px; gap: 8px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #5C6B64; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">
             <span>Matricule</span><span>Nom</span><span>Grade</span><span>Groupe</span><span>Affectation</span><span>Statut</span>
           </div>
           <div style="display: flex; flex-direction: column;">
@@ -235,7 +235,7 @@ PERSONNEL = page_header(
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8 L6.5 11.5 L13 4.5" stroke="#17663F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
               Dernier import Excel : 28/08/2026 — 12 agents ajoutés, 0 erreur
             </div>
-            <div style="display: flex; align-items: center; gap: 12px;"><span style="font-size: 12px; color: #66746D;">7 agents affichés sur 248</span><div style="display: flex; align-items: center; gap: 6px;"><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3 L4.5 6 L7.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size: 12.5px; font-weight: 600; color: #182420; padding: 0 4px;">Page 1 sur 36</span><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 3 L7.5 6 L4.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></div>
+            <div style="display: flex; align-items: center; gap: 12px;"><span style="font-size: 12px; color: #5C6B64;">7 agents affichés sur 248</span><div style="display: flex; align-items: center; gap: 6px;"><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3 L4.5 6 L7.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size: 12.5px; font-weight: 600; color: #182420; padding: 0 4px;">Page 1 sur 36</span><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 3 L7.5 6 L4.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></div>
           </div>
         </div>
 
@@ -254,7 +254,7 @@ PERSONNEL = page_header(
             <div style="display: flex; justify-content: space-between; font-size: 12.5px; padding: 6px 0;"><span style="color: #61706A;">Depuis le</span><span style="font-weight: 600;">14/03/2022</span></div>
           </div>
           <div style="background: #F6F9F7; border: 1px solid #E9EEEA; border-radius: 8px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px;">
-            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #66746D; text-transform: uppercase;">Août 2026</span>
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase;">Août 2026</span>
             <div style="display: flex; justify-content: space-between; font-size: 12.5px;"><span style="color: #3A4741;">6 gardes · 2 astreintes</span><span style="font-weight: 700;">4""" + NB + """400""" + NB + """DH</span></div>
             <div style="display: flex; justify-content: space-between; font-size: 12.5px;"><span style="color: #3A4741;">1 mission (Sidi Ifni)</span><span style="font-weight: 700;">400""" + NB + """DH</span></div>
           </div>
@@ -266,15 +266,15 @@ PERSONNEL = page_header(
       </div>"""
 
 # ============================== STRUCTURES ==============================
-LOCK = '<svg width="11" height="11" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px; vertical-align: -1px;"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="#66746D" stroke-width="1.4"></rect><path d="M5.5 7 V5 A2.5 2.5 0 0 1 10.5 5 V7" stroke="#66746D" stroke-width="1.4"></path></svg>'
+LOCK = '<svg width="11" height="11" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px; vertical-align: -1px;"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="#5C6B64" stroke-width="1.4"></rect><path d="M5.5 7 V5 A2.5 2.5 0 0 1 10.5 5 V7" stroke="#5C6B64" stroke-width="1.4"></path></svg>'
 
 def tree_item(indent, icon, label, count, selected=False, muted=False):
-    color = "#10554A" if selected else ("#66746D" if muted else "#182420")
+    color = "#10554A" if selected else ("#5C6B64" if muted else "#182420")
     weight = "700" if selected else "500"
     bg = ' background: #EDF4F1; box-shadow: inset 0 0 0 1.5px #10554A; border-radius: 7px;' if selected else ''
     return ('<div style="display: flex; align-items: center; gap: 8px; padding: 8px 10px 8px %dpx;%s">'
         '%s<span style="font-size: 13px; font-weight: %s; color: %s;">%s</span>'
-        '<span style="font-size: 12px; color: #66746D; margin-left: auto;">%s</span></div>') % (10 + indent * 18, bg, icon, weight, color, label, (LOCK + 'hors périmètre · ' + count) if muted else count)
+        '<span style="font-size: 12px; color: #5C6B64; margin-left: auto;">%s</span></div>') % (10 + indent * 18, bg, icon, weight, color, label, (LOCK + 'hors périmètre · ' + count) if muted else count)
 
 def ticon(c):
     return '<svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 16 V5 L9 2 L15 5 V16 M3 16 H15" stroke="%s" stroke-width="1.5" stroke-linejoin="round"></path></svg>' % c
@@ -286,19 +286,19 @@ STRUCTURES = page_header(
 
       <div style="display: flex; gap: 16px; flex-grow: 1; min-height: 0;">
         <div style="width: 430px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 14px; box-sizing: border-box; display: flex; flex-direction: column; gap: 2px; flex-shrink: 0;">
-          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #66746D; text-transform: uppercase; padding: 0 10px 8px;">Hiérarchie régionale</span>
+          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase; padding: 0 10px 8px;">Hiérarchie régionale</span>
 """ + "\n".join([
     tree_item(0, ticon("#61706A"), "Direction Régionale Guelmim-Oued Noun", "4 provinces"),
     tree_item(1, ticon("#61706A"), "Délégation de Guelmim", "12 structures"),
     tree_item(2, ticon("#10554A"), "CHR de Guelmim", "9 services", selected=True),
-    tree_item(3, '<span style="width: 6px; height: 6px; border-radius: 3px; background: #66746D;"></span>', "Urgences", "57 agents"),
-    tree_item(3, '<span style="width: 6px; height: 6px; border-radius: 3px; background: #66746D;"></span>', "Réanimation", "31 agents"),
-    tree_item(3, '<span style="width: 6px; height: 6px; border-radius: 3px; background: #66746D;"></span>', "Chirurgie · Maternité · Pédiatrie…", "7 autres"),
+    tree_item(3, '<span style="width: 6px; height: 6px; border-radius: 3px; background: #5C6B64;"></span>', "Urgences", "57 agents"),
+    tree_item(3, '<span style="width: 6px; height: 6px; border-radius: 3px; background: #5C6B64;"></span>', "Réanimation", "31 agents"),
+    tree_item(3, '<span style="width: 6px; height: 6px; border-radius: 3px; background: #5C6B64;"></span>', "Chirurgie · Maternité · Pédiatrie…", "7 autres"),
     tree_item(2, ticon("#61706A"), "CS urbain Guelmim-Centre", "23 agents"),
     tree_item(2, ticon("#61706A"), "CS rural Bouizakarne", "11 agents"),
-    tree_item(1, ticon("#66746D"), "Délégation de Tan-Tan", "8 structures", muted=True),
-    tree_item(1, ticon("#66746D"), "Délégation de Sidi Ifni", "7 structures", muted=True),
-    tree_item(1, ticon("#66746D"), "Délégation d'Assa-Zag", "5 structures", muted=True),
+    tree_item(1, ticon("#5C6B64"), "Délégation de Tan-Tan", "8 structures", muted=True),
+    tree_item(1, ticon("#5C6B64"), "Délégation de Sidi Ifni", "7 structures", muted=True),
+    tree_item(1, ticon("#5C6B64"), "Délégation d'Assa-Zag", "5 structures", muted=True),
 ]) + """
         </div>
 
@@ -329,7 +329,7 @@ STRUCTURES = page_header(
               <span style="font-size: 14.5px; font-weight: 600; color: #182420;">Exercices et périodes</span>
               """ + btn_secondary("Ouvrir une période") + """
             </div>
-            <div style="display: grid; grid-template-columns: 130px 1fr 190px 130px; gap: 10px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #66746D; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">
+            <div style="display: grid; grid-template-columns: 130px 1fr 190px 130px; gap: 10px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #5C6B64; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">
               <span>Exercice</span><span>Période</span><span>Saisies</span><span>État</span>
             </div>
             <div style="display: grid; grid-template-columns: 130px 1fr 190px 130px; gap: 10px; padding: 9px 10px; font-size: 13px; align-items: center; background: #EDF4F1; border-radius: 8px;">
@@ -363,7 +363,7 @@ BAREMES = page_header(
               <span style="font-size: 14.5px; font-weight: 600; color: #182420;">Taux par grade et par type — version 3</span>
               """ + badge("En vigueur depuis le 01/07/2026", "ok") + """
             </div>
-            <div style="display: grid; grid-template-columns: 1fr 110px 110px 120px; gap: 10px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #66746D; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">
+            <div style="display: grid; grid-template-columns: 1fr 110px 110px 120px; gap: 10px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #5C6B64; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">
               <span>Grade</span><span>Garde</span><span>Astreinte</span><span>Permanence</span>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 110px 110px 120px; gap: 10px; padding: 9px 10px; font-size: 13px; border-bottom: 1px solid #EDF1EE;">
@@ -382,7 +382,7 @@ BAREMES = page_header(
 
           <div style="background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1;">
             <span style="font-size: 14.5px; font-weight: 600; color: #182420;">Grille de déplacement par groupe</span>
-            <div style="display: grid; grid-template-columns: 1fr 170px 160px; gap: 10px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #66746D; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">
+            <div style="display: grid; grid-template-columns: 1fr 170px 160px; gap: 10px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #5C6B64; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">
               <span>Groupe</span><span>Indemnité journalière</span><span>Plafond / mission</span>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 170px 160px; gap: 10px; padding: 8px 10px; font-size: 13px; border-bottom: 1px solid #EDF1EE;">
@@ -396,7 +396,7 @@ BAREMES = page_header(
             </div>
             <div style="display: flex; gap: 10px; margin-top: 4px;">
               <div style="flex-grow: 1; background: #F6F9F7; border: 1px solid #E9EEEA; border-radius: 8px; padding: 10px 13px; display: flex; flex-direction: column; gap: 6px;">
-                <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #66746D; text-transform: uppercase;">Coefficients de distance (paramétrables)</span>
+                <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase;">Coefficients de distance (paramétrables)</span>
                 <div style="display: flex; gap: 18px; font-size: 12.5px; color: #3A4741;">
                   <span>&lt;""" + NB + """50""" + NB + """km : <strong>×""" + NB + """1,0</strong></span>
                   <span>50–150""" + NB + """km : <strong>×""" + NB + """1,2</strong></span>
@@ -422,18 +422,18 @@ BAREMES = page_header(
               <span style="width: 8px; height: 8px; border-radius: 4px; background: #AEB9B2; margin-top: 5px; flex-shrink: 0;"></span>
               <div style="display: flex; flex-direction: column; gap: 3px;">
                 <span style="font-size: 13px; font-weight: 600; color: #61706A;">Version 2 — archivée</span>
-                <span style="font-size: 12px; color: #66746D;">Effet 01/01/2026 → 30/06/2026</span>
+                <span style="font-size: 12px; color: #5C6B64;">Effet 01/01/2026 → 30/06/2026</span>
               </div>
             </div>
             <div style="display: flex; gap: 12px; padding: 10px 0;">
               <span style="width: 8px; height: 8px; border-radius: 4px; background: #AEB9B2; margin-top: 5px; flex-shrink: 0;"></span>
               <div style="display: flex; flex-direction: column; gap: 3px;">
                 <span style="font-size: 13px; font-weight: 600; color: #61706A;">Version 1 — archivée</span>
-                <span style="font-size: 12px; color: #66746D;">Effet 01/06/2025 → 31/12/2025</span>
+                <span style="font-size: 12px; color: #5C6B64;">Effet 01/06/2025 → 31/12/2025</span>
               </div>
             </div>
           </div>
-          <div style="margin-top: auto; display: flex; align-items: flex-start; gap: 9px; background: #FBEEDC; border: 1px solid #F2DDBB; border-radius: 8px; padding: 11px 13px;">
+          <div style="margin-top: auto; display: flex; align-items: flex-start; gap: 9px; background: #FBEEDC; border: 1px solid #F1D9B4; border-radius: 8px; padding: 11px 13px;">
             <svg width="15" height="15" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-top: 1px; flex-shrink: 0;"><path d="M9 2 L17 15.5 H1 Z" stroke="#92400E" stroke-width="1.5" stroke-linejoin="round"></path><path d="M9 7 V11 M9 13 V13.2" stroke="#92400E" stroke-width="1.6" stroke-linecap="round"></path></svg>
             <span style="font-size: 12px; color: #7A5210; line-height: 1.5;">Le calcul applique toujours le barème en vigueur à la date du planning ou de la mission — jamais le barème courant.</span>
           </div>
@@ -455,7 +455,7 @@ MISSIONS = page_header(
 
       <div style="display: flex; gap: 16px; flex-grow: 1; min-height: 0;">
         <div style="flex-grow: 1; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px;">
-          <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #66746D; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">
+          <div style="display: grid; grid-template-columns: 100px 135px 110px 70px 55px 70px 100px; gap: 8px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #5C6B64; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">
             <span>N° OM</span><span>Agent</span><span>Destination</span><span>Départ</span><span>Durée</span><span>Distance</span><span>État</span>
           </div>
           <div style="display: flex; flex-direction: column;">
@@ -479,7 +479,7 @@ MISSIONS = page_header(
             </div>
           </div>
           <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #E9EEEA;">
-            <span style="font-size: 12px; color: #66746D;">6 missions affichées sur 14 — Août 2026</span>
+            <span style="font-size: 12px; color: #5C6B64;">6 missions affichées sur 14 — Août 2026</span>
             <div style="display: flex; align-items: center; gap: 16px;"><a href="#" style="font-size: 12.5px; font-weight: 600;">Historique complet des déplacements</a><div style="display: flex; align-items: center; gap: 6px;"><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3 L4.5 6 L7.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size: 12.5px; font-weight: 600; color: #182420; padding: 0 4px;">Page 1 sur 3</span><span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 3 L7.5 6 L4.5 9" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></div>
           </div>
         </div>
@@ -501,21 +501,21 @@ MISSIONS = page_header(
           </div>
 
           <div style="background: #F6F9F7; border: 1px solid #E9EEEA; border-radius: 8px; padding: 12px 14px; display: flex; flex-direction: column; gap: 7px;">
-            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #66746D; text-transform: uppercase;">Indemnité prévisionnelle — détail du calcul</span>
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase;">Indemnité prévisionnelle — détail du calcul</span>
             <div style="display: flex; justify-content: space-between; font-size: 12.5px;"><span style="color: #3A4741;">Durée × indemnité journalière (Groupe A)</span><span>2 × 400""" + NB + """DH</span></div>
             <div style="display: flex; justify-content: space-between; font-size: 12.5px;"><span style="color: #3A4741;">Coefficient de distance (&gt;""" + NB + """150""" + NB + """km)</span><span>×""" + NB + """1,5</span></div>
             <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; border-top: 1px solid #E9EEEA; padding-top: 7px;"><span>Total (plafond 2""" + NB + """000""" + NB + """DH respecté)</span><span>1""" + NB + """200""" + NB + """DH</span></div>
           </div>
 
           <div style="display: flex; flex-direction: column; gap: 8px;">
-            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #66746D; text-transform: uppercase;">Historique</span>
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase;">Historique</span>
             <div style="display: flex; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 4px; background: #17663F; margin-top: 4px; flex-shrink: 0;"></span><span style="font-size: 12.5px; color: #3A4741;">Créé par <strong>A. Tazi</strong> — 20/08/2026 à 14:31</span></div>
             <div style="display: flex; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 4px; background: #17663F; margin-top: 4px; flex-shrink: 0;"></span><span style="font-size: 12.5px; color: #3A4741;">Départ confirmé — 25/08/2026 à 08:02</span></div>
           </div>
 
           <div style="margin-top: auto; display: flex; gap: 10px;">
             """ + btn_secondary("Modifier") + """
-            <button style="flex-grow: 1; height: 40px; background: #10554A; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; color: #FFFFFF; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; cursor: pointer;">Clôturer et envoyer au calcul</button>
+            <button style="flex-grow: 1; height: 42px; background: #10554A; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; color: #FFFFFF; font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; cursor: pointer;">Clôturer et envoyer au calcul</button>
           </div>
         </div>
       </div>"""

@@ -18,7 +18,7 @@ def card_title(text, right=""):
 
 def thead(cols, grid):
     cells = "".join('<span>%s</span>' % c for c in cols)
-    return '<div style="display: grid; grid-template-columns: %s; gap: 8px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #66746D; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">%s</div>' % (grid, cells)
+    return '<div style="display: grid; grid-template-columns: %s; gap: 8px; padding: 7px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.6px; color: #5C6B64; text-transform: uppercase; border-bottom: 1px solid #E9EEEA;">%s</div>' % (grid, cells)
 
 def trow(cells, grid, selected=False, last=False):
     style = "background: #EDF4F1; box-shadow: inset 0 0 0 1.5px #10554A; border-radius: 8px;" if selected else ("" if last else "border-bottom: 1px solid #EDF1EE;")
@@ -28,16 +28,16 @@ def kv(label, value, strong=True):
     return '<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12.5px; color: #61706A;">%s</span><span style="font-size: 13px; font-weight: %s; color: #182420; text-align: right;">%s</span></div>' % (label, "600" if strong else "400", value)
 
 def field(label, value, placeholder=False, help_text="", grow=True):
-    color = "#66746D" if placeholder else "#182420"
-    h = '<span style="font-size: 12px; color: #66746D;">%s</span>' % help_text if help_text else ""
+    color = "#5C6B64" if placeholder else "#182420"
+    h = '<span style="font-size: 12px; color: #5C6B64;">%s</span>' % help_text if help_text else ""
     return ('<div style="display: flex; flex-direction: column; gap: 6px;%s"><label style="font-size: 13px; font-weight: 600; color: #3A4741;">%s</label>'
             '<div style="height: 42px; border: 1px solid #C9D3CD; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; box-sizing: border-box;"><span style="font-size: 13px; color: %s;">%s</span>'
             '<svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5 L6 7.5 L9 4.5" stroke="#61706A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>%s</div>') % (
         " flex-grow: 1;" if grow else "", label, color, value, h)
 
 def field_text(label, value, placeholder=False, help_text="", grow=True):
-    color = "#66746D" if placeholder else "#182420"
-    h = '<span style="font-size: 12px; color: #66746D;">%s</span>' % help_text if help_text else ""
+    color = "#5C6B64" if placeholder else "#182420"
+    h = '<span style="font-size: 12px; color: #5C6B64;">%s</span>' % help_text if help_text else ""
     return ('<div style="display: flex; flex-direction: column; gap: 6px;%s"><label style="font-size: 13px; font-weight: 600; color: #3A4741;">%s</label>'
             '<div style="height: 42px; border: 1px solid #C9D3CD; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; padding: 0 12px; box-sizing: border-box;"><span style="font-size: 13px; color: %s;">%s</span></div>%s</div>') % (
         " flex-grow: 1;" if grow else "", label, color, value, h)
@@ -83,7 +83,7 @@ def pager(label):
             '<span style="width: 30px; height: 30px; border: 1px solid #DBE3DE; border-radius: 7px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;">%s</span></div>') % (CHEV_L, label, CHEV_R)
 
 def footer(left, right):
-    return '<div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #E9EEEA;"><span style="font-size: 12px; color: #66746D;">%s</span>%s</div>' % (left, right)
+    return '<div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid #E9EEEA;"><span style="font-size: 12px; color: #5C6B64;">%s</span>%s</div>' % (left, right)
 
 def hbar(label, value_text, pct, color):
     return ('<div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; justify-content: space-between; font-size: 12.5px;"><span style="color: #3A4741; font-weight: 500;">%s</span><span style="color: #182420; font-weight: 600;">%s</span></div>'
@@ -93,7 +93,7 @@ def btn_danger_outline(label):
     return '<button style="height: 38px; padding: 0 16px; background: #FFFFFF; border: 1px solid #E0B4B0; border-radius: 8px; font-size: 13px; font-weight: 600; color: #A61B1B; font-family: \'IBM Plex Sans\', \'Segoe UI\', sans-serif; cursor: pointer;">%s</button>' % label
 
 def btn_disabled(label):
-    return '<button style="height: 38px; padding: 0 16px; background: #E7EDE9; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; color: #8A968F; font-family: \'IBM Plex Sans\', \'Segoe UI\', sans-serif;">%s</button>' % label
+    return '<button style="height: 38px; padding: 0 16px; background: #E7EDE9; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; color: #5C6B64; font-family: \'IBM Plex Sans\', \'Segoe UI\', sans-serif;">%s</button>' % label
 
 # ============================== CALCUL DES INDEMNITÉS (M6) ==============================
 calc_rows = [
@@ -121,11 +121,11 @@ CALCUL = page_header(
       """ + alert("warn", "<strong>Dernier calcul :</strong> 31/08/2026 à 18:02 par H. Bouzid — 312 gardes · 148 astreintes · 96 permanences · barème v3. <strong>2 agents à recalculer</strong> : leur planning a été modifié depuis.", "Recalculer les 2 agents") + """
 
       <div style="display: flex; align-items: center; gap: 10px;">""" + sel("Service", "Tous") + sel("Type", "Tous") + sel("Statut", "Tous") + """
-        <span style="margin-left: auto; font-size: 12.5px; color: #66746D;">248 agents · total calculé <strong style="color: #182420;">155""" + NB + """400""" + NB + """DH</strong></span>
+        <span style="margin-left: auto; font-size: 12.5px; color: #5C6B64;">248 agents · total calculé <strong style="color: #182420;">155""" + NB + """400""" + NB + """DH</strong></span>
       </div>
 
       <div style="display: flex; gap: 16px; flex-grow: 1; min-height: 0;">
-        <div style="width: 780px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; flex-shrink: 0;">
+        <div style="width: 740px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; flex-shrink: 0;">
           """ + card_title("Montants par agent — Août 2026") + """
           <div style="display: flex; flex-direction: column;">""" + calc_table + """</div>
           """ + footer("7 agents affichés sur 248", pager("Page 1 sur 36")) + """
@@ -139,13 +139,13 @@ CALCUL = page_header(
             </div>""" + badge("À recalculer", "warn") + """
           </div>
           <div style="display: flex; flex-direction: column; gap: 0;">
-            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #66746D; text-transform: uppercase; padding-bottom: 6px;">Détail du calcul</span>
-            """ + kv("Gardes × 6 <span style=\"color: #66746D; font-weight: 400;\">(01, 09, 12, 22, 29, 30/08)</span> · 600" + NB + "DH", "3" + NB + "600" + NB + "DH") + kv("Astreintes × 2 <span style=\"color: #66746D; font-weight: 400;\">(08, 15/08)</span> · 400" + NB + "DH", "800" + NB + "DH") + kv("Permanences × 0", "—", False) + kv("Barème appliqué", "v3 — effet 01/07/2026", False) + """
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase; padding-bottom: 6px;">Détail du calcul</span>
+            """ + kv("Gardes × 6 <span style=\"color: #5C6B64; font-weight: 400;\">(01, 09, 12, 22, 29, 30/08)</span> · 600" + NB + "DH", "3" + NB + "600" + NB + "DH") + kv("Astreintes × 2 <span style=\"color: #5C6B64; font-weight: 400;\">(08, 15/08)</span> · 400" + NB + "DH", "800" + NB + "DH") + kv("Permanences × 0", "—", False) + kv("Barème appliqué", "v3 — effet 01/07/2026", False) + """
             <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0;"><span style="font-size: 13px; font-weight: 700;">Total calculé le 31/08</span><span style="font-size: 20px; font-weight: 700;">4""" + NB + """400""" + NB + """DH</span></div>
           </div>
           """ + alert("warn", "Planning modifié le 02/09 : la garde du <strong>12/08</strong> a été supprimée (doublon). Nouveau total prévisionnel : <strong>3" + NB + "800" + NB + "DH</strong>.") + """
           <div style="display: flex; flex-direction: column; gap: 8px;">
-            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #66746D; text-transform: uppercase;">Historique</span>
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase;">Historique</span>
             <div style="display: flex; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 4px; background: #17663F; margin-top: 4px; flex-shrink: 0;"></span><span style="font-size: 12.5px; color: #3A4741;">Calculé par <strong>H. Bouzid</strong> — 31/08/2026 à 18:02 · barème v3</span></div>
             <div style="display: flex; gap: 10px;"><span style="width: 7px; height: 7px; border-radius: 4px; background: #D97706; margin-top: 4px; flex-shrink: 0;"></span><span style="font-size: 12.5px; color: #92400E;">Planning modifié par <strong>A. Tazi</strong> — 02/09/2026 à 09:40 · recalcul requis</span></div>
           </div>
@@ -167,7 +167,7 @@ DL_ICON = '<svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="ht
 etat_table = thead(["Rapport", "Période", "Généré par", "Le", "Format", ""], ETAT_GRID)
 for i, (nom, struct, per, who, when, fmt) in enumerate(etat_rows):
     etat_table += trow([
-        '<span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">%s</span><span style="font-size: 12px; color: #66746D;">%s</span></span>' % (nom, struct), '<span style="color: #3A4741;">%s</span>' % per,
+        '<span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">%s</span><span style="font-size: 12px; color: #5C6B64;">%s</span></span>' % (nom, struct), '<span style="color: #3A4741;">%s</span>' % per,
         '<span style="color: #3A4741;">%s</span>' % who, '<span style="color: #3A4741;">%s</span>' % when, '<span>%s</span>' % badge(fmt, "neutral"),
         '<span style="display: flex; gap: 10px; justify-content: flex-end; align-items: center;"><a href="#" style="font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 4px;">%sTélécharger</a><span style="width: 28px; height: 28px; border: 1px solid #DBE3DE; border-radius: 7px; display: flex; align-items: center; justify-content: center;" title="Régénérer"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 8 A5 5 0 1 1 11.5 4.5 M11.5 2 V4.8 H8.7" stroke="#10554A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></span>' % DL_ICON],
         ETAT_GRID, False, i == len(etat_rows) - 1)
@@ -185,11 +185,11 @@ ETATS = page_header(
           """ + field("Détail par", "Service", help_text="Choisir : service, agent ou type d'indemnité", grow=False) + """
           <div style="display: flex; flex-direction: column; gap: 6px;"><label style="font-size: 13px; font-weight: 600; color: #3A4741;">Format</label>""" + chips(["PDF", "Excel", "CSV"], "PDF") + """</div>
           <div style="display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; background: #F6F9F7; border: 1px solid #E9EEEA; border-radius: 8px;">
-            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #66746D; text-transform: uppercase;">Aperçu du contenu</span>
+            <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase;">Aperçu du contenu</span>
             <span style="font-size: 12.5px; color: #3A4741; line-height: 1.5;">9 services · 248 agents · 4 types d'indemnité · total 184""" + NB + """250""" + NB + """DH · lots validés et prêts pour paiement uniquement</span>
           </div>
-          <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">""" + btn_primary("Générer le rapport (PDF)", plus=False).replace('padding: 0 16px;', 'padding: 0 16px; width: 100%; justify-content: center; height: 42px;') + """
-            <span style="font-size: 12px; color: #66746D; text-align: center;">Le rapport est archivé automatiquement et horodaté.</span>
+          <div style="display: flex; flex-direction: column; gap: 8px;">""" + btn_primary("Générer le rapport (PDF)", plus=False).replace('padding: 0 16px;', 'padding: 0 16px; width: 100%; justify-content: center; height: 42px;') + """
+            <span style="font-size: 12px; color: #5C6B64; text-align: center;">Le rapport est archivé automatiquement et horodaté.</span>
           </div>
         </div>
 
@@ -213,11 +213,11 @@ def line_chart():
     xlab = "".join('<text x="%d" y="212">%s</text>' % (x, m) for x, m in zip(xs, months))
     return ('<svg width="700" height="224" viewBox="0 0 700 224" xmlns="http://www.w3.org/2000/svg">'
             '<g stroke="#E9EEEA" stroke-width="1">%s</g>'
-            '<g font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11.5" fill="#66746D" text-anchor="end">%s</g>'
+            '<g font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11.5" fill="#5C6B64" text-anchor="end">%s</g>'
             '<polyline points="%s" fill="none" stroke="#AEB9B2" stroke-width="2" stroke-dasharray="5 4" stroke-linejoin="round"></polyline>'
-            '<polyline points="%s" fill="none" stroke="#0A8467" stroke-width="2.2" stroke-linejoin="round"></polyline>'
-            '<circle cx="550" cy="54" r="4" fill="#0A8467"></circle><circle cx="550" cy="82" r="3.5" fill="#AEB9B2"></circle>'
-            '<g font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600"><text x="562" y="58" fill="#0A8467">2026 · 184 k</text><text x="562" y="86" fill="#66746D">2025 · 171 k</text></g>'
+            '<polyline points="%s" fill="none" stroke="#10554A" stroke-width="2.2" stroke-linejoin="round"></polyline>'
+            '<circle cx="550" cy="54" r="4" fill="#10554A"></circle><circle cx="550" cy="82" r="3.5" fill="#AEB9B2"></circle>'
+            '<g font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600"><text x="562" y="58" fill="#10554A">2026 · 184 k</text><text x="562" y="86" fill="#5C6B64">2025 · 171 k</text></g>'
             '<g font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11.5" fill="#61706A" text-anchor="middle">%s</g></svg>') % (grid, ylab, pts25, pts26, xlab)
 
 STATS = page_header(
@@ -233,14 +233,14 @@ STATS = page_header(
 
       <div style="display: flex; gap: 16px;">
         <div style="width: 740px; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px; flex-shrink: 0;">
-          """ + card_title("Dépenses mensuelles — 2026 comparé à 2025", '<div style="display: flex; gap: 14px;"><span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #61706A;"><span style="width: 14px; height: 3px; background: #0A8467; border-radius: 2px;"></span>2026</span><span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #61706A;"><span style="width: 14px; height: 0; border-top: 2px dashed #AEB9B2;"></span>2025</span></div>') + line_chart() + """
+          """ + card_title("Dépenses mensuelles — 2026 comparé à 2025", '<div style="display: flex; gap: 14px;"><span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #61706A;"><span style="width: 14px; height: 3px; background: #10554A; border-radius: 2px;"></span>2026</span><span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #61706A;"><span style="width: 14px; height: 0; border-top: 2px dashed #AEB9B2;"></span>2025</span></div>') + line_chart() + """
         </div>
         <div style="flex-grow: 1; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px; min-width: 0;">
           """ + card_title("Comparaison entre structures — Août 2026") + """
           <div style="display: flex; flex-direction: column; gap: 12px;">
-            """ + hbar("CHR de Guelmim", "184" + NB + "250" + NB + "DH", 100, "#0A8467") + hbar("Délégation de Tan-Tan", "96" + NB + "400" + NB + "DH", 52, "#0A8467") + hbar("Délégation de Sidi Ifni", "72" + NB + "900" + NB + "DH", 40, "#0A8467") + hbar("CS urbain Guelmim-Centre", "41" + NB + "300" + NB + "DH", 22, "#0A8467") + hbar("Délégation d'Assa-Zag", "38" + NB + "100" + NB + "DH", 21, "#0A8467") + """
+            """ + hbar("CHR de Guelmim", "184" + NB + "250" + NB + "DH", 100, "#10554A") + hbar("Délégation de Tan-Tan", "96" + NB + "400" + NB + "DH", 52, "#10554A") + hbar("Délégation de Sidi Ifni", "72" + NB + "900" + NB + "DH", 40, "#10554A") + hbar("CS urbain Guelmim-Centre", "41" + NB + "300" + NB + "DH", 22, "#10554A") + hbar("Délégation d'Assa-Zag", "38" + NB + "100" + NB + "DH", 21, "#10554A") + """
           </div>
-          <span style="margin-top: auto; font-size: 12px; color: #66746D;">Total région : 432""" + NB + """950""" + NB + """DH · <a href="#">Détail par structure</a></span>
+          <span style="margin-top: auto; font-size: 12px; color: #5C6B64;">Total région : 432""" + NB + """950""" + NB + """DH · <a href="#">Détail par structure</a></span>
         </div>
       </div>
 
@@ -254,7 +254,7 @@ STATS = page_header(
         <div style="flex-grow: 1; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; min-width: 0;">
           """ + card_title("Services les plus coûteux — Août 2026") + """
           <div style="display: flex; flex-direction: column; gap: 10px;">
-            """ + hbar("Urgences", "61" + NB + "200" + NB + "DH", 100, "#0A8467") + hbar("Réanimation", "38" + NB + "900" + NB + "DH", 64, "#0A8467") + hbar("Chirurgie", "27" + NB + "400" + NB + "DH", 45, "#0A8467") + hbar("Maternité", "22" + NB + "800" + NB + "DH", 37, "#0A8467") + """
+            """ + hbar("Urgences", "61" + NB + "200" + NB + "DH", 100, "#10554A") + hbar("Réanimation", "38" + NB + "900" + NB + "DH", 64, "#10554A") + hbar("Chirurgie", "27" + NB + "400" + NB + "DH", 45, "#10554A") + hbar("Maternité", "22" + NB + "800" + NB + "DH", 37, "#10554A") + """
           </div>
         </div>
       </div>"""
@@ -272,7 +272,7 @@ USER_GRID = "150px 105px 135px 1fr 85px 75px"
 user_table = thead(["Utilisateur", "Profil", "Structure", "Modules autorisés", "Dernière conn.", "Statut"], USER_GRID)
 for i, (ini, nom, login, role, struct, mods, last, st, selected) in enumerate(user_rows):
     user_table += trow([
-        '<span style="display: flex; align-items: center; gap: 8px;"><span style="width: 28px; height: 28px; border-radius: 14px; background: #DCEBE6; color: #10554A; font-size: 11.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">%s</span><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">%s</span><span style="font-size: 11.5px; color: #66746D;">%s</span></span></span>' % (ini, nom, login),
+        '<span style="display: flex; align-items: center; gap: 8px;"><span style="width: 28px; height: 28px; border-radius: 14px; background: #DCEBE6; color: #10554A; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">%s</span><span style="display: flex; flex-direction: column;"><span style="font-weight: 600;">%s</span><span style="font-size: 12px; color: #5C6B64;">%s</span></span></span>' % (ini, nom, login),
         '<span style="color: #3A4741;">%s</span>' % role, '<span style="color: #3A4741;">%s</span>' % struct, '<span style="color: #3A4741;">%s</span>' % mods,
         '<span style="color: #3A4741;">%s</span>' % last, '<span>%s</span>' % st], USER_GRID, selected, i == len(user_rows) - 1)
 
@@ -283,7 +283,7 @@ audit_rows = [
     ("02:00", "Système", "sauvegarde automatique — 412" + NB + "Mo, chiffrée", "Sauvegarde"),
     ("hier 16:40", "H. Bouzid", "a créé la version 3 du barème « Garde — Médecins »", "Barèmes"),
 ]
-audit_list = "".join('<div style="display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12px; color: #66746D; width: 68px; flex-shrink: 0;">%s</span><span style="font-size: 12.5px; color: #3A4741; line-height: 1.4; flex-grow: 1;"><strong>%s</strong> %s</span>%s</div>' % (t, who, what, badge(mod, "neutral")) for t, who, what, mod in audit_rows)
+audit_list = "".join('<div style="display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; border-bottom: 1px solid #EDF1EE;"><span style="font-size: 12px; color: #5C6B64; width: 68px; flex-shrink: 0;">%s</span><span style="font-size: 12.5px; color: #3A4741; line-height: 1.4; flex-grow: 1;"><strong>%s</strong> %s</span>%s</div>' % (t, who, what, badge(mod, "neutral")) for t, who, what, mod in audit_rows)
 
 ADMIN = page_header(
     "Administration",
@@ -307,7 +307,7 @@ ADMIN = page_header(
           <div style="flex-grow: 1; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; min-height: 0;">
             """ + card_title("Journal d'audit — aujourd'hui", '<a href="#" style="font-size: 12.5px; font-weight: 600;">Tout le journal</a>') + """
             <div style="display: flex; flex-direction: column;">""" + audit_list + """</div>
-            <span style="margin-top: auto; font-size: 12px; color: #66746D;">Chaque action est horodatée, attribuée et conservée 5 ans. Le journal n'est pas modifiable.</span>
+            <span style="margin-top: auto; font-size: 12px; color: #5C6B64;">Chaque action est horodatée, attribuée et conservée 5 ans. Le journal n'est pas modifiable.</span>
           </div>
         </div>
       </div>"""
@@ -364,13 +364,13 @@ saisie_body = (
 )
 saisie_footer = ('<div style="display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: #3A4741;"><span style="width: 18px; height: 18px; border-radius: 4px; border: 1.5px solid #10554A; background: #10554A; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 6.2 L5 8.6 L9.5 3.8" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>Saisie en série : après enregistrement, passer au jour suivant pour le même agent</div>'
     '<div style="display: flex; gap: 10px;"><div style="flex-grow: 1;">' + btn_secondary("Annuler").replace('padding: 0 16px;', 'padding: 0 16px; width: 100%; justify-content: center;') + '</div><div style="flex-grow: 2;">' + btn_disabled("Enregistrer la garde").replace('padding: 0 16px;', 'padding: 0 16px; width: 100%;') + '</div></div>'
-    '<span style="font-size: 12px; color: #66746D; text-align: center;">Enregistrer est désactivé tant que le doublon n\'est pas résolu.</span>')
+    '<span style="font-size: 12px; color: #5C6B64; text-align: center;">Enregistrer est désactivé tant que le doublon n\'est pas résolu.</span>')
 write_out("PlanningSaisie.dc.html", with_overlay(planning, drawer("Nouvelle saisie", "Planning — Urgences · Août 2026 · 3 saisies dans cette série", saisie_body, saisie_footer)))
 
 # --- Planning : succès + saisie en série
 planning_ok = planning.replace(
     '<span style="font-size: 12px; font-weight: 600; color: #61706A;">13</span>',
-    '<span style="font-size: 12px; font-weight: 600; color: #61706A;">13</span>\n            <span style="display: flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #3A4741; background: #F4F3EF; border-radius: 4px; padding: 2px 6px; box-shadow: 0 0 0 1.5px #0A8467;"><span style="width: 7px; height: 7px; border-radius: 2px; background: #0A8467; flex-shrink: 0;"></span>G · Dr Benali</span>', 1)
+    '<span style="font-size: 12px; font-weight: 600; color: #61706A;">13</span>\n            <span style="display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #3A4741; background: #ECF1EE; border-radius: 4px; padding: 2px 6px; box-shadow: 0 0 0 1.5px #0A8467;"><span style="width: 7px; height: 7px; border-radius: 2px; background: #0A8467; flex-shrink: 0;"></span>G · Dr Benali</span>', 1)
 planning_ok = planning_ok.replace('<div style="border-right: 1px solid #EDF1EE; padding: 6px 8px;"><span style="font-size: 12px; font-weight: 600; color: #61706A;">13</span>',
                                   '<div style="border-right: 1px solid #EDF1EE; padding: 6px 8px; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 12px; font-weight: 600; color: #61706A;">13</span>', 1)
 assert planning_ok != planning, "cellule du 13 introuvable"
@@ -384,7 +384,7 @@ serie_body = (
 )
 serie_footer = ('<div style="display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: #3A4741;"><span style="width: 18px; height: 18px; border-radius: 4px; border: 1.5px solid #10554A; background: #10554A; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 6.2 L5 8.6 L9.5 3.8" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>Saisie en série : le formulaire reste ouvert au jour suivant pour le même agent</div>'
     '<div style="display: flex; gap: 10px;"><div style="flex-grow: 1;">' + btn_secondary("Terminer la série").replace('padding: 0 16px;', 'padding: 0 16px; width: 100%; justify-content: center;') + '</div><div style="flex-grow: 2;">' + btn_primary("Enregistrer la garde", plus=False).replace('padding: 0 16px;', 'padding: 0 16px; width: 100%; justify-content: center;') + '</div></div>'
-    '<span style="font-size: 12px; color: #66746D; text-align: center;">4 saisies dans cette série · Échap ou « Terminer la série » ferme le formulaire.</span>')
+    '<span style="font-size: 12px; color: #5C6B64; text-align: center;">4 saisies dans cette série · Échap ou « Terminer la série » ferme le formulaire.</span>')
 write_out("PlanningEnregistre.dc.html", with_overlay(planning_ok, drawer("Nouvelle saisie", "Planning — Urgences · Août 2026 · saisie en série", serie_body, serie_footer)))
 
 # --- Missions : formulaire d'ordre de mission avec calcul prévisionnel en direct
@@ -395,12 +395,12 @@ om_body = (
     + '<div style="display: flex; gap: 10px;">' + field_text("Destination", "Agadir", grow=True) + field_text("Distance (aller)", "452 km", help_text="Calculée depuis Guelmim — modifiable", grow=True) + '</div>'
     + field_text("Motif", "Réunion régionale de coordination", grow=False)
     + '<div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; background: #F6F9F7; border: 1px solid #E9EEEA; border-radius: 8px;">'
-      '<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #66746D; text-transform: uppercase; padding-bottom: 4px;">Indemnité prévisionnelle — mise à jour à chaque champ</span>'
+      '<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: #5C6B64; text-transform: uppercase; padding-bottom: 4px;">Indemnité prévisionnelle — mise à jour à chaque champ</span>'
       + kv("Durée × indemnité journalière (Groupe A)", "2 × 400" + NB + "DH") + kv("Coefficient de distance (> 150 km)", "× 1,5") +
       '<div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 8px;"><span style="font-size: 13px; font-weight: 700;">Total (plafond 2' + NB + '000' + NB + 'DH respecté)</span><span style="font-size: 18px; font-weight: 700;">1' + NB + '200' + NB + 'DH</span></div></div>'
 )
 om_footer = ('<div style="display: flex; gap: 10px;"><div style="flex-grow: 1;">' + btn_secondary("Annuler").replace('padding: 0 16px;', 'padding: 0 16px; width: 100%; justify-content: center;') + '</div><div style="flex-grow: 2;">' + btn_primary("Créer l'ordre de mission", plus=False).replace('padding: 0 16px;', 'padding: 0 16px; width: 100%; justify-content: center;') + '</div></div>'
-    '<span style="font-size: 12px; color: #66746D; text-align: center;">L\'ordre est créé « En cours » ; le montant définitif est calculé à la clôture, avec le barème en vigueur à la date du départ.</span>')
+    '<span style="font-size: 12px; color: #5C6B64; text-align: center;">L\'ordre est créé « En cours » ; le montant définitif est calculé à la clôture, avec le barème en vigueur à la date du départ.</span>')
 write_out("MissionSaisie.dc.html", with_overlay(missions_html, drawer("Nouvel ordre de mission", "Missions & déplacements — CHR de Guelmim", om_body, om_footer)))
 
 # --- Validation : confirmation avant validation
@@ -436,14 +436,14 @@ def sans_0142(base):
 
 v_ok = sans_0142(validation)
 v_ok = v_ok.replace('<span style="font-size: 19px; font-weight: 700; color: #182420;">23 lots</span>', '<span style="font-size: 19px; font-weight: 700; color: #182420;">24 lots</span>')
-v_ok = v_ok.replace('<span style="font-size: 12px; color: #66746D;">96' + NB + '830' + NB + 'DH</span>', '<span style="font-size: 12px; color: #66746D;">115' + NB + '280' + NB + 'DH</span>')
+v_ok = v_ok.replace('<span style="font-size: 12px; color: #5C6B64;">96' + NB + '830' + NB + 'DH</span>', '<span style="font-size: 12px; color: #5C6B64;">115' + NB + '280' + NB + 'DH</span>')
 v_ok = v_ok.replace("Prêts pour paiement (23)", "Prêts pour paiement (24)")
 write_out("ValidationSucces.dc.html", with_overlay(v_ok, toast("ok", "<strong>Lot LOT-2026-0142 validé</strong> — 18" + NB + "450" + NB + "DH · prêt pour paiement · journalisé le 02/09/2026 à 09:12 (N. El Fassi).", "Annuler (5 min)")))
 
 # --- Validation : rejet (W-05) — le lot repart en saisie avec le motif
 v_rej = sans_0142(validation)
 v_rej = v_rej.replace('<span style="font-size: 19px; font-weight: 700; color: #182420;">8 lots</span>', '<span style="font-size: 19px; font-weight: 700; color: #182420;">9 lots</span>')
-v_rej = v_rej.replace('<span style="font-size: 12px; color: #66746D;">21' + NB + '340' + NB + 'DH</span>', '<span style="font-size: 12px; color: #66746D;">39' + NB + '790' + NB + 'DH</span>')
+v_rej = v_rej.replace('<span style="font-size: 12px; color: #5C6B64;">21' + NB + '340' + NB + 'DH</span>', '<span style="font-size: 12px; color: #5C6B64;">39' + NB + '790' + NB + 'DH</span>')
 v_rej = v_rej.replace("Rejetés (2)", "Rejetés (3)")
 write_out("ValidationRejete.dc.html", with_overlay(v_rej, toast("ok", "<strong>Lot LOT-2026-0142 renvoyé à la saisie</strong> — motif transmis à A. Tazi (notification) · 18" + NB + "450" + NB + "DH retirés de l'attente · journalisé le 02/09/2026 à 09:14.", "Annuler (5 min)")))
 
@@ -465,7 +465,7 @@ v_empty = v_empty.replace("6 lots affichés sur 12", "0 lot en attente").replace
 v_empty, n = re.subn(r'\s*<span style="min-width: 18px; height: 18px; border-radius: 9px; background: #B98A2F;[^>]*>12</span>', "", v_empty, count=1)
 # panneau de droite : vide aussi
 v_empty, n2 = re.subn(r'(<div style="flex-grow: 1; background: #FFFFFF; border: 1px solid #DBE3DE; border-radius: 10px; padding: 18px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">).*?(?=\n      </div>\n\n    </div>)',
-    r'\1<div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;"><span style="font-size: 13px; color: #61706A; text-align: center; max-width: 260px; line-height: 1.5;">Sélectionnez un lot pour voir son détail et le valider ou le rejeter.</span></div>\n        </div>',
+    r'\1<div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;"><span style="font-size: 13px; color: #61706A; text-align: center; max-width: 260px; line-height: 1.5;">Aucun lot à afficher pour ce filtre.</span></div>\n        </div>',
     v_empty, count=1, flags=re.S)
 assert n2 == 1, "panneau détail introuvable"
 v_empty = re.sub(r'<a [^>]*>Afficher tout</a>', "", v_empty, count=1)
@@ -484,7 +484,7 @@ imp_table = thead(["Ligne", "Agent", "Problème et correction"], IMP_GRID) + "".
     for i, (l, a, p) in enumerate(imp_rows))
 import_body = (
     '<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;">'
-    '<div style="padding: 10px 12px; background: #F6F9F7; border-radius: 8px; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 12px; color: #66746D;">Lignes lues</span><span style="font-size: 20px; font-weight: 700;">15</span></div>'
+    '<div style="padding: 10px 12px; background: #F6F9F7; border-radius: 8px; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 12px; color: #5C6B64;">Lignes lues</span><span style="font-size: 20px; font-weight: 700;">15</span></div>'
     '<div style="padding: 10px 12px; background: #E4F2E9; border-radius: 8px; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 12px; color: #17663F;">Prêtes à importer</span><span style="font-size: 20px; font-weight: 700; color: #17663F;">12</span></div>'
     '<div style="padding: 10px 12px; background: #FADEDC; border-radius: 8px; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 12px; color: #A61B1B;">En erreur</span><span style="font-size: 20px; font-weight: 700; color: #A61B1B;">3</span></div></div>'
     '<div style="display: flex; flex-direction: column;">' + imp_table + '</div>'
