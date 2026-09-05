@@ -58,6 +58,8 @@ Contraintes : une personne, délai court, SQL Server Express déjà choisi (D4),
 
 ### Outillage et intégration continue
 
+> **Amendement du 2026-09-05** — FluentAssertions est passé sous licence commerciale à partir de la version 8 (usage professionnel payant). Le projet étant un marché public, on utilise **AwesomeAssertions** (fork communautaire sous licence Apache 2.0, même API ; depuis sa version 9 l'espace de noms est `AwesomeAssertions` — vérifié dans le paquet 9.6.0) : un `using` à changer, aucune redevance. Le reste de la décision est inchangé.
+
 - **xUnit** (standard .NET, parallélisme natif), **FluentAssertions** (messages d'échec lisibles), **NSubstitute** (doubles), **coverlet** + `reportgenerator` (couverture), **Respawn** (remise à zéro de la base de test), **FlaUI** (UI Automation Windows).
 - Commande unique : `dotnet test` exécute tout ; les tests d'intégration sont marqués `[Trait("Category","Integration")]` pour pouvoir n'exécuter que l'unitaire en local (`--filter Category!=Integration`).
 - **GitHub Actions** (gratuit pour ce dépôt) : à chaque push, unitaires + couverture ; l'échec d'un cas golden ou une couverture < 100 % sur les moteurs **bloque la fusion** vers `main`. Les tests d'intégration SQL Server tournent sur un exécuteur Windows avec SQL Server Express installé dans le workflow ; FlaUI reste local (nécessite une session graphique).
