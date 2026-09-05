@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Gestindem.Api/Gestindem.Api.csproj" />
+    <Project Path="src/Gestindem.Application/Gestindem.Application.csproj" />
+    <Project Path="src/Gestindem.Contracts/Gestindem.Contracts.csproj" />
+    <Project Path="src/Gestindem.Desktop/Gestindem.Desktop.csproj" />
+    <Project Path="src/Gestindem.Domain/Gestindem.Domain.csproj" />
+    <Project Path="src/Gestindem.Infrastructure/Gestindem.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Gestindem.Api.Tests/Gestindem.Api.Tests.csproj" />
+    <Project Path="tests/Gestindem.Application.Tests/Gestindem.Application.Tests.csproj" />
+    <Project Path="tests/Gestindem.Desktop.Tests/Gestindem.Desktop.Tests.csproj" />
+    <Project Path="tests/Gestindem.Domain.Tests/Gestindem.Domain.Tests.csproj" />
+    <Project Path="tests/Gestindem.Infrastructure.Tests/Gestindem.Infrastructure.Tests.csproj" />
+  </Folder>
+</Solution>

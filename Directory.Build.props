@@ -1,0 +1,20 @@
+<Project>
+  <!--
+    Directory.Build.props : réglages communs hérités par TOUS les projets du dépôt.
+    Une seule source de vérité pour la qualité du code (règle n°9 d'AGENTS.md) :
+    - Nullable : les références nulles sont vérifiées par le compilateur (moins de NullReferenceException).
+    - TreatWarningsAsErrors : un avertissement bloque la compilation — on ne laisse pas la dette s'accumuler.
+    - ImplicitUsings : les espaces de noms courants (System, System.Linq…) sont importés automatiquement.
+    - LangVersion latest : les fonctionnalités C# les plus récentes du SDK installé.
+  -->
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <LangVersion>latest</LangVersion>
+    <Deterministic>true</Deterministic>
+    <Company>CHR de Guelmim</Company>
+    <Product>GESTINDEM</Product>
+    <NeutralLanguage>fr-FR</NeutralLanguage>
+  </PropertyGroup>
+</Project>
